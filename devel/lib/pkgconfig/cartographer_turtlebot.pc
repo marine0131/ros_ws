@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/devel
+
+Name: cartographer_turtlebot
+Description: Description of cartographer_turtlebot
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/whj/catkin_ws/devel/lib 
+Requires: message_runtime roscpp sensor_msgs

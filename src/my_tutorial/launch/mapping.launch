@@ -1,0 +1,19 @@
+<launch>  
+
+	<!--websocket-->
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	
+	<!--fake data pub and scriber-->
+	<node name="fake_data_pub" pkg="my_tutorial" type="fake_data_pub.py"/>
+
+
+	<!--map server-->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find my_tutorial)/maps/company_map.yaml" respawn="false" />
+	
+	<!--map rename-->
+	<node name="map_rename_server" pkg="my_tutorial" type="map_rename_server.py"/>
+	<!--remote cmd-->
+	<node name="roslaunch_api" pkg="my_tutorial" type="roslaunch_api"/>
+
+
+</launch>

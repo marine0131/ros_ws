@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/whj/catkin_ws/src/cartographer_turtlebot/cartographer_turtlebot/src/flat_world_imu_node_main.cc
+ros/ros.h
+/home/whj/catkin_ws/src/cartographer_turtlebot/cartographer_turtlebot/src/ros/ros.h
+sensor_msgs/Imu.h
+/home/whj/catkin_ws/src/cartographer_turtlebot/cartographer_turtlebot/src/sensor_msgs/Imu.h
+

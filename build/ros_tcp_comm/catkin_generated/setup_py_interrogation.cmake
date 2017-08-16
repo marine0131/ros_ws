@@ -1,0 +1,6 @@
+set(ros_tcp_comm_SETUP_PY_VERSION "1.0.0")
+set(ros_tcp_comm_SETUP_PY_SCRIPTS "./scripts")
+set(ros_tcp_comm_SETUP_PY_PACKAGES "ros_tcp_comm")
+set(ros_tcp_comm_SETUP_PY_PACKAGE_DIRS "src/ros_tcp_comm")
+set(ros_tcp_comm_SETUP_PY_MODULES "")
+set(ros_tcp_comm_SETUP_PY_MODULE_DIRS "")

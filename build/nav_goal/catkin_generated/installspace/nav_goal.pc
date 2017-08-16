@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/install
+
+Name: nav_goal
+Description: Description of nav_goal
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/whj/catkin_ws/install/lib 
+Requires: 

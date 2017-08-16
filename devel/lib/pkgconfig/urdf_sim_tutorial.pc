@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/devel
+
+Name: urdf_sim_tutorial
+Description: Description of urdf_sim_tutorial
+Version: 0.2.5
+Cflags: 
+Libs: -L/home/whj/catkin_ws/devel/lib 
+Requires: 

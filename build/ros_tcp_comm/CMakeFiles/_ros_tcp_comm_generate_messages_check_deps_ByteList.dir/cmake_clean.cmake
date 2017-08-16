@@ -1,0 +1,8 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/_ros_tcp_comm_generate_messages_check_deps_ByteList"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang)
+  INCLUDE(CMakeFiles/_ros_tcp_comm_generate_messages_check_deps_ByteList.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

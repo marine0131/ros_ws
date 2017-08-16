@@ -1,0 +1,21 @@
+<launch>  
+
+	<!--websocket-->
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	
+	<!--fake data pub and scriber-->
+	<node name="fake_data_pub" pkg="my_tutorial" type="fake_data_pub.py"/>
+	
+	<!--get map list server-->
+	<node name="map_list_server" pkg="my_tutorial" type="map_list_server.py" >
+		<param name="map_list_dir" type="string" value="/home/whj/catkin_ws/src/my_tutorial/maps/"/>
+	</node>
+
+	<!--get map data server-->
+	<node name="static_map_server" pkg="my_tutorial" type="static_map_server.py"/>
+
+	<!--remote cmd-->
+	<node name="roslaunch_api" pkg="my_tutorial" type="roslaunch_api"/>
+
+
+</launch>

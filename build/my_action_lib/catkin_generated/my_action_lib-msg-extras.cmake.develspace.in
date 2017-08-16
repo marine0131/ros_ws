@@ -1,0 +1,2 @@
+set(my_action_lib_MESSAGE_FILES "/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesAction.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesActionGoal.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesActionResult.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesActionFeedback.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesGoal.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesResult.msg;/home/whj/catkin_ws/devel/share/my_action_lib/msg/DoDishesFeedback.msg")
+set(my_action_lib_SERVICE_FILES "")

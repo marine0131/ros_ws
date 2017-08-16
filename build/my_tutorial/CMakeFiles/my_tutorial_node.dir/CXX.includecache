@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/whj/catkin_ws/src/my_tutorial/src/roslaunch_launcher.cpp
+ros/ros.h
+/home/whj/catkin_ws/src/my_tutorial/src/ros/ros.h
+std_msgs/String.h
+/home/whj/catkin_ws/src/my_tutorial/src/std_msgs/String.h
+sstream
+-
+
