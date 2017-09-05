@@ -1,0 +1,16 @@
+digraph G {
+"base_link" -> "laser"[label="Broadcaster: /laser_broadcaster\nAverage rate: 19.820 Hz\nMost recent transform: 1503988781.168 ( -0.034 sec old)\nBuffer length: 4.944 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /odometry_pub\nAverage rate: 20.194 Hz\nMost recent transform: 1503988781.105 ( 0.028 sec old)\nBuffer length: 4.902 sec\n"];
+"base_link" -> "ut4"[label="Broadcaster: /ultra4_broadcaster\nAverage rate: 19.843 Hz\nMost recent transform: 1503988781.171 ( -0.038 sec old)\nBuffer length: 4.939 sec\n"];
+"base_link" -> "ut3"[label="Broadcaster: /ultra3_broadcaster\nAverage rate: 19.877 Hz\nMost recent transform: 1503988781.163 ( -0.030 sec old)\nBuffer length: 4.930 sec\n"];
+"base_link" -> "imu"[label="Broadcaster: /imu_broadcaster\nAverage rate: 19.850 Hz\nMost recent transform: 1503988781.134 ( -0.001 sec old)\nBuffer length: 4.887 sec\n"];
+"base_link" -> "ut1"[label="Broadcaster: /ultra1_broadcaster\nAverage rate: 19.846 Hz\nMost recent transform: 1503988781.135 ( -0.001 sec old)\nBuffer length: 4.888 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 990000.000 Hz\nMost recent transform: 1.000 ( 1503988780.133 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "ut6"[label="Broadcaster: /ultra6_broadcaster\nAverage rate: 19.864 Hz\nMost recent transform: 1503988781.134 ( -0.001 sec old)\nBuffer length: 4.883 sec\n"];
+"base_link" -> "ut2"[label="Broadcaster: /ultra2_broadcaster\nAverage rate: 19.821 Hz\nMost recent transform: 1503988781.148 ( -0.015 sec old)\nBuffer length: 4.894 sec\n"];
+"base_link" -> "ut5"[label="Broadcaster: /ultra5_broadcaster\nAverage rate: 19.758 Hz\nMost recent transform: 1503988781.174 ( -0.041 sec old)\nBuffer length: 4.909 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1503988781.133"[ shape=plaintext ] ;
+ }->"map";
+}

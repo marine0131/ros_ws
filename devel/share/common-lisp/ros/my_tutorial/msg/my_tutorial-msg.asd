@@ -16,6 +16,8 @@
     (:file "_package_GridPoint" :depends-on ("_package"))
     (:file "Encoder" :depends-on ("_package_Encoder"))
     (:file "_package_Encoder" :depends-on ("_package"))
+    (:file "Sonar" :depends-on ("_package_Sonar"))
+    (:file "_package_Sonar" :depends-on ("_package"))
     (:file "NavGoal" :depends-on ("_package_NavGoal"))
     (:file "_package_NavGoal" :depends-on ("_package"))
   ))

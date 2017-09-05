@@ -1,0 +1,5 @@
+string request
+---
+int32   grid_x
+int32   grid_y
+string  msg

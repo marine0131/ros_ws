@@ -3,7 +3,11 @@
   (:export
    "<BYTELIST>"
    "BYTELIST"
+   "<ULTRASOUND>"
+   "ULTRASOUND"
    "<INTLIST>"
    "INTLIST"
+   "<ENCODER>"
+   "ENCODER"
   ))
 

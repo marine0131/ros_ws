@@ -1,0 +1,56 @@
+<!-- 
+  Simulate a differential drive robot with the teb_local_planner in stage:
+  - map_server
+  - move_base
+  - static map
+  - amcl
+  - rviz view
+ -->
+<launch>
+
+        <!--  ************** Global Parameters ***************  -->
+        <param name="/use_sim_time" value="false"/>
+
+        <!--  ************** tf ***************  -->
+	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.67 0 0 0 1 base_link laser 50"  />
+
+        <!--  ************** Navigation ***************  -->
+	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  	  	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_common_params.yaml" command="load" ns="global_costmap" />
+  	 	<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_local_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_global_costmap_params.yaml" command="load" />
+  		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_local_planner_params.yaml" command="load" />
+		<rosparam file="$(find xunjian_nav)/config/teb_local_planner/teb_costmap_converter_params.yaml" command="load" />
+		<!--<param name="base_global_planner" value="global_planner/GlobalPlanner" />
+		<param name="base_global_planner" value="navfn/NavfnROS" />
+		<param name="planner_frequency" value="1.0" />
+		<param name="planner_patience" value="5.0" />-->
+
+		<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+		<param name="controller_frequency" value="5.0" />
+		<param name="controller_patience" value="15.0" />
+	</node>
+
+
+	<!--  ****** Maps *****  -->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find xunjian_nav)/maps/company_map0616.yaml" respawn="false" >
+		<param name="frame_id" value="/map"/>
+	</node>
+	
+	<!-- ********amcl********-->
+	<include file="$(find xunjian_nav)/launch/amcl.launch" />
+
+	<!--*********urdf model******-->
+	<arg name="model" value="$(find xunjian_nav)/urdf/test_model.urdf"/>
+	<arg name ="gui" default="true"/>
+	<arg name="rvizconfig" default="$(find xunjian_nav)/rviz/urdf.rviz"/>
+
+	<param name = "robot_description" command="$(find xacro)/xacro.py $(arg model)"/>
+	<param name = "use_gui" value="$(arg gui)"/>
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+	<!-- *******rviz *******-->
+	<node name="rviz" pkg="rviz" type="rviz"  required="true" args="-d $(find xunjian_nav)/rviz/nav_test.rviz" />
+</launch>

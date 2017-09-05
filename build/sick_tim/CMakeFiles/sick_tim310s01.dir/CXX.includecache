@@ -96,6 +96,12 @@ sick_tim/sick_tim_common_mockup.h
 sick_tim/sick_tim310s01_parser.h
 -
 
+/home/whj/catkin_ws/src/sick_tim/src/sick_tim310s01_parser.cpp
+sick_tim/sick_tim310s01_parser.h
+-
+ros/ros.h
+-
+
 /opt/ros/indigo/include/XmlRpc.h
 string
 -

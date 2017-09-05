@@ -1,0 +1,37 @@
+<launch>
+  <arg name="simulation" default="$(optenv XUNJIAN_SIMULATION false)"/>
+  <param name="/use_sim_time" value="$(arg simulation)"/>
+  <node pkg="xunjian_nav" type="wheel_speed_pub" name="wheel_speed_pub"  />
+  <node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"/>
+ <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
+  <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.67 0 0 0 1 base_link laser 50"  />
+ <!-- <param name="robot_description" command="$(find xacro)/xacro.py '$(find sick_tim)/urdf/example.urdf.xacro'" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />-->
+  <!--<node name="sick_tim551_2050001" pkg="sick_tim" type="sick_tim551_2050001" respawn="false" output="screen">
+  </node>-->
+  <include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
+  <!--<node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+    <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>
+    <param name="serial_baudrate"     type="int"    value="115200"/>
+    <param name="frame_id"            type="string" value="laser"/>
+    <param name="inverted"            type="bool"   value="false"/>
+    <param name="angle_compensate"    type="bool"   value="true"/>
+  </node>-->
+  <node pkg="gmapping"  type="slam_gmapping"  name="slam_gmapping"  args="/scan"  output="screen">
+    <param name="map_update_interval"  value="1.0"/>
+
+    <!--<param name="maxUrange" value="9"/>
+    <param name="maxRange"  value="10"/>-->
+    <param name="xmin"    type="double"  value="-20.0" />
+    <param name="ymin"    type="double"  value="-20.0" />
+    <param name="xmax"    type="double"  value="20.0" />
+    <param name="ymax"    type="double"  value="20.0" />
+    <param name="particles" type="int"  value="100"  /><!-- 30 -->
+    <param name="minimumScore"   type="double"  value="200"/><!-- 30 -->
+    <param name="delta"          type="double" value="0.05"/>
+    <param name="lsigma"  value="0.05"/>
+    <param name="linearUpdate"  value="0.2"/>
+    <param name="angularUpdate"  value="0.1"/>
+  </node>
+  <node pkg="rviz" type="rviz" name="rviz"  output="screen"/>
+</launch>

@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_GridLaser.py"
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_GridPoint.py"
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_Encoder.py"
+  "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_Sonar.py"
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_GridPose.py"
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_Position.py"
   "/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/my_tutorial/msg/_NavGoal.py"

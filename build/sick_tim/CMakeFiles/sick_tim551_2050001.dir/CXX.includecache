@@ -110,6 +110,12 @@ sick_tim/sick_tim_common_mockup.h
 sick_tim/sick_tim551_2050001_parser.h
 -
 
+/home/whj/catkin_ws/src/sick_tim/src/sick_tim551_2050001_parser.cpp
+sick_tim/sick_tim551_2050001_parser.h
+-
+ros/ros.h
+-
+
 /home/whj/catkin_ws/src/sick_tim/src/sick_tim_common_tcp.cpp
 sick_tim/sick_tim_common_tcp.h
 -

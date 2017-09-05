@@ -13,6 +13,8 @@
    "GRIDPOINT"
    "<ENCODER>"
    "ENCODER"
+   "<SONAR>"
+   "SONAR"
    "<NAVGOAL>"
    "NAVGOAL"
   ))

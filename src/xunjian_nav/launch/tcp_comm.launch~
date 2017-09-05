@@ -1,0 +1,7 @@
+<launch>  
+    <node name="tcp_comm" pkg="ros_tcp_comm" type="tcp_comm2.py" output="screen">
+      	<param name="port_number" type="int" value="24000"/>
+      	<param name="ip" type="string" value="127.0.0.1"/>
+    </node>
+
+</launch>

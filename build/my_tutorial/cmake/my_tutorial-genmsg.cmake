@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "my_tutorial: 7 messages, 6 services")
+message(STATUS "my_tutorial: 8 messages, 6 services")
 
 set(MSG_I_FLAGS "-Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -38,6 +38,11 @@ add_custom_target(_my_tutorial_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg" NAME_WE)
 add_custom_target(_my_tutorial_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_tutorial" "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg" ""
+)
+
+get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg" NAME_WE)
+add_custom_target(_my_tutorial_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_tutorial" "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg" ""
 )
 
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv" NAME_WE)
@@ -100,6 +105,12 @@ _generate_msg_cpp(my_tutorial
 )
 _generate_msg_cpp(my_tutorial
   "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_tutorial
+)
+_generate_msg_cpp(my_tutorial
+  "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_tutorial
@@ -189,6 +200,8 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/MapDat
 add_dependencies(my_tutorial_generate_messages_cpp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_cpp _my_tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg" NAME_WE)
+add_dependencies(my_tutorial_generate_messages_cpp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_cpp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg" NAME_WE)
@@ -229,6 +242,12 @@ _generate_msg_lisp(my_tutorial
 )
 _generate_msg_lisp(my_tutorial
   "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_tutorial
+)
+_generate_msg_lisp(my_tutorial
+  "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_tutorial
@@ -318,6 +337,8 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/MapDat
 add_dependencies(my_tutorial_generate_messages_lisp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_lisp _my_tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg" NAME_WE)
+add_dependencies(my_tutorial_generate_messages_lisp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_lisp _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg" NAME_WE)
@@ -358,6 +379,12 @@ _generate_msg_py(my_tutorial
 )
 _generate_msg_py(my_tutorial
   "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_tutorial
+)
+_generate_msg_py(my_tutorial
+  "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_tutorial
@@ -446,6 +473,8 @@ add_dependencies(my_tutorial_generate_messages_py _my_tutorial_generate_messages
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/MapData.srv" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_py _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg" NAME_WE)
+add_dependencies(my_tutorial_generate_messages_py _my_tutorial_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_py _my_tutorial_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv" NAME_WE)
 add_dependencies(my_tutorial_generate_messages_py _my_tutorial_generate_messages_check_deps_${_filename})

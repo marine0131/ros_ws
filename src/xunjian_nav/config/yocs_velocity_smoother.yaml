@@ -1,0 +1,7 @@
+accel_lim_v: 0.3 #0.2
+accel_lim_w: 0.4  #0.2
+speed_lim_v: 0.5
+speed_lim_w: 0.8
+decel_factor: 1.5
+frequency: 20
+robot_feedback: 0 #1

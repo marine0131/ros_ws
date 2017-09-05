@@ -45,14 +45,23 @@ CMAKE_BINARY_DIR = /home/whj/catkin_ws/build
 # Include the progress variables for this target.
 include tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp.dir/progress.make
 
+tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h
 tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h
 tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/IntList.h
+tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h
+
+/home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h: /home/whj/catkin_ws/src/tcp_comm/msg/Encoder.msg
+/home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from tcp_comm/Encoder.msg"
+	cd /home/whj/catkin_ws/build/tcp_comm && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/tcp_comm/msg/Encoder.msg -Itcp_comm:/home/whj/catkin_ws/src/tcp_comm/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p tcp_comm -o /home/whj/catkin_ws/devel/include/tcp_comm -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h: /home/whj/catkin_ws/src/tcp_comm/msg/ByteList.msg
 /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from tcp_comm/ByteList.msg"
 	cd /home/whj/catkin_ws/build/tcp_comm && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/tcp_comm/msg/ByteList.msg -Itcp_comm:/home/whj/catkin_ws/src/tcp_comm/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p tcp_comm -o /home/whj/catkin_ws/devel/include/tcp_comm -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -60,13 +69,22 @@ tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/in
 /home/whj/catkin_ws/devel/include/tcp_comm/IntList.h: /home/whj/catkin_ws/src/tcp_comm/msg/IntList.msg
 /home/whj/catkin_ws/devel/include/tcp_comm/IntList.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/whj/catkin_ws/devel/include/tcp_comm/IntList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from tcp_comm/IntList.msg"
 	cd /home/whj/catkin_ws/build/tcp_comm && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/tcp_comm/msg/IntList.msg -Itcp_comm:/home/whj/catkin_ws/src/tcp_comm/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p tcp_comm -o /home/whj/catkin_ws/devel/include/tcp_comm -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h: /home/whj/catkin_ws/src/tcp_comm/msg/Ultrasound.msg
+/home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from tcp_comm/Ultrasound.msg"
+	cd /home/whj/catkin_ws/build/tcp_comm && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/tcp_comm/msg/Ultrasound.msg -Itcp_comm:/home/whj/catkin_ws/src/tcp_comm/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p tcp_comm -o /home/whj/catkin_ws/devel/include/tcp_comm -e /opt/ros/indigo/share/gencpp/cmake/..
+
 tcp_comm_generate_messages_cpp: tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp
+tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h
 tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h
 tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/IntList.h
+tcp_comm_generate_messages_cpp: /home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h
 tcp_comm_generate_messages_cpp: tcp_comm/CMakeFiles/tcp_comm_generate_messages_cpp.dir/build.make
 .PHONY : tcp_comm_generate_messages_cpp
 

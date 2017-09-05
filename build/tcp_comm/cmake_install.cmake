@@ -36,6 +36,8 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tcp_comm/msg" TYPE FILE FILES
     "/home/whj/catkin_ws/src/tcp_comm/msg/IntList.msg"
     "/home/whj/catkin_ws/src/tcp_comm/msg/ByteList.msg"
+    "/home/whj/catkin_ws/src/tcp_comm/msg/Encoder.msg"
+    "/home/whj/catkin_ws/src/tcp_comm/msg/Ultrasound.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

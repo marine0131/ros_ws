@@ -1,0 +1,18 @@
+<launch>
+  <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+    <param name="serial_port"         type="string" value="/dev/ttyUSB1"/>  
+    <param name="serial_baudrate"     type="int"    value="115200"/>
+    <param name="frame_id"            type="string" value="laser"/>
+    <param name="inverted"            type="bool"   value="false"/>
+    <param name="angle_compensate"    type="bool"   value="true"/>
+  </node>
+  <node pkg="gmapping"  type="slam_gmapping"  name="slam_gmapping"  args="/scan"  output="screen"> 
+    <param name="xmin"     value="-100.0" />
+    <param name="ymin"    value="-100.0" />
+    <param name="xmax"     value="100.0" />
+    <param name="ymax"    value="100.0" />
+    <param name="particles" type="int" value="60"  />
+    <param name="minimumScore"     value="50"/>
+  </node>
+  <include file="$(find xunjian_nav)/launch/move_base.launch"/>
+</launch>

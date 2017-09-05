@@ -1,0 +1,64 @@
+base_global_planner: navfn/NavfnROS
+
+controller_frequency: 10.0
+planner_frequency: 0.5
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
+
+TrajectoryPlannerROS:
+#ACCELERATION   
+    acc_lim_x: 1.0
+    acc_lim_y: 0.0 # zero for a differential drive robot
+    acc_lim_theta: 1.5
+#VELOCITY
+    max_vel_x: 0.5 
+    min_vel_x: 0.05 
+    max_vel_y: 0.0  # zero for a differential drive robot
+    min_vel_y: 0.0
+    max_vel_theta: 0.8
+    min_vel_theta: -0.8  
+    min_in_place_vel_theta: 0.4
+    escape_vel: -0.1
+
+    holonomic_robot: false
+
+#GLOBAL TOLERANCE
+    yaw_goal_tolerance: 0.2 # 
+    xy_goal_tolerance: 0.3  # 
+    latch_xy_goal_tolerance: true  #false
+
+#FORWARD SIMULATION
+    sim_time: 3.0 # 2   这里设置<=2.0会产生局限的性能，尤其是机器人通过狭小的通道；
+    sim_granularity: 0.05  #It basically means how frequent should the points on this trajectory be examined；越小计算资源越多
+    angular_sim_granularity: 0.025
+    vx_samples: 15
+    vy_samples: 0 # zero for a differential drive robot
+    vtheta_samples: 30 #一般情况下vtheta_samples>vx_samples  20  40
+
+#TRAJECTORY PLANNER
+    meter_scoring: true
+    pdist_scale: 0.8  #0.8
+    gdist_scale: 0.6  #0.4
+    occdist_scale: 0.01   #0.1  越小越好，这样就不会在障碍物附近陷住
+    oscillation_reset_dist: 0.2   #0.05    
+    heading_scoring: false
+    heading_lookahead: 0.05 #how far look ahead in meters in-place-rotation
+    heading_scoring_timestep: 0.8
+    dwa: true   
+    publish_cost_grid_pc: false
+    global_frame_id: odom
+    simple_attractor: false
+
+#OSCILLATION PREVENTION
+    reset_distance: 4
+
+#GLOBAL PLAN
+    prune_plan: true
+
+NavfnROS:
+  allow_unknown: true
+  recovery_behavior_enabled: true
+  visualize_potential: true
+  cost_factor: 0.55
+  neutral_cost: 20
+  lethal_cost: 253

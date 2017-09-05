@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridLaser.lisp"
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPoint.lisp"
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Encoder.lisp"
+  "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Sonar.lisp"
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPose.lisp"
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Position.lisp"
   "/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/NavGoal.lisp"

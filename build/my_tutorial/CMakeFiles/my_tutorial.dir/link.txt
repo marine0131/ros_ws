@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC    -shared -Wl,-soname,libmy_tutorial.so -o /home/whj/catkin_ws/devel/lib/libmy_tutorial.so CMakeFiles/my_tutorial.dir/src/roslaunch_launcher.cpp.o 

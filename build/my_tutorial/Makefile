@@ -318,6 +318,20 @@ _my_tutorial_generate_messages_check_deps_Position/fast:
 .PHONY : _my_tutorial_generate_messages_check_deps_Position/fast
 
 # Convenience name for target.
+my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/rule
+.PHONY : my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/rule
+
+# Convenience name for target.
+_my_tutorial_generate_messages_check_deps_Sonar: my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/rule
+.PHONY : _my_tutorial_generate_messages_check_deps_Sonar
+
+# fast build rule for target.
+_my_tutorial_generate_messages_check_deps_Sonar/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/build.make my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Sonar.dir/build
+.PHONY : _my_tutorial_generate_messages_check_deps_Sonar/fast
+
+# Convenience name for target.
 my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Ultrasound.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Ultrasound.dir/rule
 .PHONY : my_tutorial/CMakeFiles/_my_tutorial_generate_messages_check_deps_Ultrasound.dir/rule
@@ -429,170 +443,6 @@ my_tutorial_genpy/fast:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/my_tutorial_genpy.dir/build.make my_tutorial/CMakeFiles/my_tutorial_genpy.dir/build
 .PHONY : my_tutorial_genpy/fast
 
-# Convenience name for target.
-my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make my_tutorial/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make my_tutorial/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/build.make my_tutorial/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make my_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/roslaunch_api.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/roslaunch_api.dir/rule
-.PHONY : my_tutorial/CMakeFiles/roslaunch_api.dir/rule
-
-# Convenience name for target.
-roslaunch_api: my_tutorial/CMakeFiles/roslaunch_api.dir/rule
-.PHONY : roslaunch_api
-
-# fast build rule for target.
-roslaunch_api/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roslaunch_api.dir/build.make my_tutorial/CMakeFiles/roslaunch_api.dir/build
-.PHONY : roslaunch_api/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make my_tutorial/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make my_tutorial/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/build.make my_tutorial/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-src/roslaunch_api.o: src/roslaunch_api.cpp.o
-.PHONY : src/roslaunch_api.o
-
-# target to build an object file
-src/roslaunch_api.cpp.o:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roslaunch_api.dir/build.make my_tutorial/CMakeFiles/roslaunch_api.dir/src/roslaunch_api.cpp.o
-.PHONY : src/roslaunch_api.cpp.o
-
-src/roslaunch_api.i: src/roslaunch_api.cpp.i
-.PHONY : src/roslaunch_api.i
-
-# target to preprocess a source file
-src/roslaunch_api.cpp.i:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roslaunch_api.dir/build.make my_tutorial/CMakeFiles/roslaunch_api.dir/src/roslaunch_api.cpp.i
-.PHONY : src/roslaunch_api.cpp.i
-
-src/roslaunch_api.s: src/roslaunch_api.cpp.s
-.PHONY : src/roslaunch_api.s
-
-# target to generate assembly for a file
-src/roslaunch_api.cpp.s:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f my_tutorial/CMakeFiles/roslaunch_api.dir/build.make my_tutorial/CMakeFiles/roslaunch_api.dir/src/roslaunch_api.cpp.s
-.PHONY : src/roslaunch_api.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -611,6 +461,7 @@ help:
 	@echo "... _my_tutorial_generate_messages_check_deps_MapRename"
 	@echo "... _my_tutorial_generate_messages_check_deps_NavGoal"
 	@echo "... _my_tutorial_generate_messages_check_deps_Position"
+	@echo "... _my_tutorial_generate_messages_check_deps_Sonar"
 	@echo "... _my_tutorial_generate_messages_check_deps_Ultrasound"
 	@echo "... edit_cache"
 	@echo "... install"
@@ -625,20 +476,7 @@ help:
 	@echo "... my_tutorial_genlisp"
 	@echo "... my_tutorial_genpy"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roslaunch_api"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... src/roslaunch_api.o"
-	@echo "... src/roslaunch_api.i"
-	@echo "... src/roslaunch_api.s"
 .PHONY : help
 
 

@@ -1,0 +1,20 @@
+<launch>  
+
+	<!--websocket-->
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	
+	<!--fake data pub and scriber-->
+	<node name="fake_data_pub" pkg="my_tutorial" type="fake_data_pub.py"/>
+
+
+	<!--map server-->
+	<node name="static_map_server" pkg="my_tutorial" type="static_map_server.py" /> 
+	
+	<!--remote cmd-->
+	<node name="roslaunch_api" pkg="my_tutorial" type="roslaunch_api" />
+
+    <!--goal server-->
+    <node name="goal_server" pkg="my_tutorial" type="goal_server.py" />
+
+
+</launch>

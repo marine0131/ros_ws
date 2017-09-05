@@ -48,6 +48,7 @@ include my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp.dir/progress.ma
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridLaser.h
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridPoint.h
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Encoder.h
+my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Position.h
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h
@@ -81,31 +82,38 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/Encoder.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h: /home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg
+/home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/Sonar.msg"
+	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
+
 /home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h: /home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg
 /home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/GridPose.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/my_tutorial/Position.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/my_tutorial/Position.h: /home/whj/catkin_ws/src/my_tutorial/msg/Position.msg
 /home/whj/catkin_ws/devel/include/my_tutorial/Position.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/Position.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/Position.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h: /home/whj/catkin_ws/src/my_tutorial/msg/NavGoal.msg
 /home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/NavGoal.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/NavGoal.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/my_tutorial/Ultrasound.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/my_tutorial/Ultrasound.h: /home/whj/catkin_ws/src/my_tutorial/msg/Ultrasound.msg
 /home/whj/catkin_ws/devel/include/my_tutorial/Ultrasound.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/Ultrasound.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/msg/Ultrasound.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -113,7 +121,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/MapData.h: /home/whj/catkin_ws/src/my_tutorial/srv/MapData.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/MapData.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/MapData.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/MapData.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapData.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -121,7 +129,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/MapRename.h: /home/whj/catkin_ws/src/my_tutorial/srv/MapRename.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/MapRename.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/MapRename.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/MapRename.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapRename.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -129,7 +137,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/DelGoal.h: /home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/DelGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/DelGoal.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/DelGoal.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -137,7 +145,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/GoalList.h: /home/whj/catkin_ws/src/my_tutorial/srv/GoalList.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/GoalList.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/GoalList.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -145,7 +153,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/MapList.h: /home/whj/catkin_ws/src/my_tutorial/srv/MapList.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/MapList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/MapList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/MapList.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapList.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -153,7 +161,7 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/de
 /home/whj/catkin_ws/devel/include/my_tutorial/AddGoal.h: /home/whj/catkin_ws/src/my_tutorial/srv/AddGoal.srv
 /home/whj/catkin_ws/devel/include/my_tutorial/AddGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/my_tutorial/AddGoal.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from my_tutorial/AddGoal.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/my_tutorial/srv/AddGoal.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/include/my_tutorial -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -161,6 +169,7 @@ my_tutorial_generate_messages_cpp: my_tutorial/CMakeFiles/my_tutorial_generate_m
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridLaser.h
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridPoint.h
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Encoder.h
+my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/Position.h
 my_tutorial_generate_messages_cpp: /home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h

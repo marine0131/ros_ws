@@ -1,6 +1,0 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# creates a relay to a python script source file, acting as that file.
-# The purpose is that of a symlink
-with open("/home/whj/catkin_ws/src/ros_tcp_comm/./scripts", 'r') as fh:
-    exec(fh.read())

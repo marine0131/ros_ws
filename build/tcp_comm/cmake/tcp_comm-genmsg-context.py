@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/whj/catkin_ws/src/tcp_comm/msg/IntList.msg;/home/whj/catkin_ws/src/tcp_comm/msg/ByteList.msg"
+messages_str = "/home/whj/catkin_ws/src/tcp_comm/msg/IntList.msg;/home/whj/catkin_ws/src/tcp_comm/msg/ByteList.msg;/home/whj/catkin_ws/src/tcp_comm/msg/Encoder.msg;/home/whj/catkin_ws/src/tcp_comm/msg/Ultrasound.msg"
 services_str = ""
 pkg_name = "tcp_comm"
 dependencies_str = "std_msgs"

@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+
+import rospy
+import time
+from sensor_msgs.msg import Range
+from my_tutorial.msg import Sonar
+
+class SonarPub(object):
+    def __init__(self, FREQ, SONAR_NUM, SONAR_FRAME):
+        # GOAL_LIST_DIR = rospy.get_param('~goal_list_dir')
+        # self.path = MAP_DIR
+        self.sonar_msg = Sonar()
+        self.range_msg = Range()
+
+        rospy.Subscriber('range_dist', Sonar, self.sonar_callback)
+
+        sonar_pub = []
+        for i in range(SONAR_NUM):
+            topic_name = 'sonar' + str(i + 1)
+            sonar_pub.append(rospy.Publisher(topic_name, Range, queue_size = 2)) # publisher object
+            self.range_msg.max_range = 0.8
+            self.range_msg.min_range = 0.02
+            self.range_msg.field_of_view = 0.5
+
+        rate = rospy.Rate(20.0)
+        while not rospy.is_shutdown():
+            rospy.loginfo(rospy.get_time())
+            i = 0
+            for int_range in self.sonar_msg.ranges:
+                self.range_msg.range = int_range / 100.0
+                self.range_msg.header.frame_id = SONAR_FRAME + str(i+1) # sonar link
+                sonar_pub[i].publish(self.range_msg)
+                i += 1
+            rate.sleep()
+
+    def sonar_callback(self, msg):
+        self.sonar_msg.ranges =map(int, msg.ranges)
+        rospy.loginfo(msg.ranges)
+
+if __name__ == "__main__":
+    rospy.init_node('sonar_pub')
+    sonar_num = rospy.get_param('~sonar_num')  # int
+    freq = rospy.get_param('~freq', 20.0)
+    sonar_frame = rospy.get_param('~sonar_frame', 'sonar')
+
+    SonarPub(freq , sonar_num, sonar_frame)
+    rospy.spin()

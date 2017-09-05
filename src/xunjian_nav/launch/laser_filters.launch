@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.015 0 0.73 0 0 0 1 base_link laser 50"  />
+  <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+  <include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>
+</launch>

@@ -1,7 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/tcp_comm_generate_messages_cpp"
+  "/home/whj/catkin_ws/devel/include/tcp_comm/Encoder.h"
   "/home/whj/catkin_ws/devel/include/tcp_comm/ByteList.h"
   "/home/whj/catkin_ws/devel/include/tcp_comm/IntList.h"
+  "/home/whj/catkin_ws/devel/include/tcp_comm/Ultrasound.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -48,6 +48,7 @@ include my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp.dir/progress.m
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridLaser.lisp
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPoint.lisp
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Encoder.lisp
+my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Sonar.lisp
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPose.lisp
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Position.lisp
 my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/NavGoal.lisp
@@ -78,63 +79,69 @@ my_tutorial/CMakeFiles/my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/Encoder.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/Encoder.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
 
+/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Sonar.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Sonar.lisp: /home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/Sonar.msg"
+	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
+
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPose.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPose.lisp: /home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/GridPose.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/GridPose.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Position.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Position.lisp: /home/whj/catkin_ws/src/my_tutorial/msg/Position.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/Position.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/Position.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/NavGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/NavGoal.lisp: /home/whj/catkin_ws/src/my_tutorial/msg/NavGoal.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/NavGoal.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/NavGoal.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Ultrasound.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Ultrasound.lisp: /home/whj/catkin_ws/src/my_tutorial/msg/Ultrasound.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/Ultrasound.msg"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/msg/Ultrasound.msg -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapData.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapData.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/MapData.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/MapData.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapData.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapRename.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapRename.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/MapRename.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/MapRename.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapRename.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/DelGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/DelGoal.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/DelGoal.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/DelGoal.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/GoalList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/GoalList.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/GoalList.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/GoalList.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/GoalList.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/MapList.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/MapList.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/MapList.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/MapList.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/AddGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv/AddGoal.lisp: /home/whj/catkin_ws/src/my_tutorial/srv/AddGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from my_tutorial/AddGoal.srv"
 	cd /home/whj/catkin_ws/build/my_tutorial && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/my_tutorial/srv/AddGoal.srv -Imy_tutorial:/home/whj/catkin_ws/src/my_tutorial/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p my_tutorial -o /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/srv
 
@@ -142,6 +149,7 @@ my_tutorial_generate_messages_lisp: my_tutorial/CMakeFiles/my_tutorial_generate_
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridLaser.lisp
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPoint.lisp
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Encoder.lisp
+my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Sonar.lisp
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/GridPose.lisp
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/Position.lisp
 my_tutorial_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/my_tutorial/msg/NavGoal.lisp

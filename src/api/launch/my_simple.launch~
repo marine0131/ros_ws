@@ -1,0 +1,8 @@
+<launch>  
+
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	<node name="my_pub_cmd_vel" pkg="my_tutorial" type="my_pub_cmd_vel.py"/>
+	<node name="add_two_ints_server" pkg="rospy_tutorials" type="add_two_ints_server" />
+	<node name="fibonnacci_server" pkg="actionlib_tutorials" type="fibonacci_server" />
+
+</launch>

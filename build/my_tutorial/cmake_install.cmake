@@ -41,6 +41,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/whj/catkin_ws/src/my_tutorial/msg/GridLaser.msg"
     "/home/whj/catkin_ws/src/my_tutorial/msg/GridPoint.msg"
     "/home/whj/catkin_ws/src/my_tutorial/msg/NavGoal.msg"
+    "/home/whj/catkin_ws/src/my_tutorial/msg/Sonar.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

@@ -1,0 +1,50 @@
+<launch>
+	<arg name="simulation" default="$(optenv XUNJIAN_SIMULATION false)"/>
+	<param name="/use_sim_time" value="$(arg simulation)"/>
+	
+	<!--**************static tf*************-->
+	<node pkg="tf" type="static_transform_publisher" name="imu_broadcaster"   args="0.12 0 0.7 0 0 0 base_link imu 50" />
+	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.21 0 0.21 0 0 0 1 base_link laser 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra1_broadcaster" args="0.25 0.0 0.70 0 0 0  base_link ut1 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra2_broadcaster" args="0.125 -0.217 0.70 -1.05 0 0  base_link ut2 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra3_broadcaster" args="-0.125 -0.217 0.70 -2.1 0 0  base_link ut3 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra4_broadcaster" args="-0.25 0.0 0.70 -3.14 0 0  base_link ut4 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra5_broadcaster" args="-0.125 0.217 0.70 2.1 0 0  base_link ut5 50"  />
+	<node pkg="tf" type="static_transform_publisher" name="ultra6_broadcaster" args="0.125 0.217 0.70 1.05 0 0  base_link ut6 50"  />
+
+	<!-- ***********serial port********-->
+	<!-- <node pkg="xunjian_nav" type="serial_node" name="serial_node" output="log"/>-->
+	<node name="tcp_comm" pkg="xunjian_nav" type="tcp_comm.py" output="screen">
+      	<param name="port_number" type="int" value="24000"/>
+      	<param name="ip" type="string" value="127.0.0.1"/>
+    </node>
+	<node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 encoder_reset std_msgs/Empty"/>
+	
+	<!-- ***********wheel speed pub and odom pub********-->
+	<node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"  />
+  	<node pkg="xunjian_nav" type="ultrasound_pub" name="ultrasound_pub"/>
+	<!--<node pkg="xunjian_nav" type="wheel_speed_pub" name="wheel_speed_pub"  />	-->
+	<!--<node pkg="xunjian_nav" type="ultrasound_avoidance"  name="ultrasound_avoidance"  />-->
+	<!--<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.015 0 0.73 0 0 0 1 base_link laser 50"  />-->
+	<!--<node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 map odom 50" />-->
+	
+	<!-- ************laser******  -->
+  	<!--<include file="$(find rplidar_ros)/launch/rplidar.launch"/>-->
+  	<include file="$(find sick_tim)/launch/sick_tim561_2050101.launch"/>
+	<!--<include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>-->
+	<!--<include file="$(find laser_filters)/launch/laser_filter_chain.launch" />-->
+        <!-- *********velovity smoother *************-->
+	<!-- nodelet manager -->
+	<node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
+	<!-- velocity smoother -->
+	<include file="$(find yocs_velocity_smoother)/launch/velocity_smoother.launch">
+		<arg name="node_name"             value="velocity_smoother"/>
+		<arg name="nodelet_manager_name"  value="nodelet_manager"/>
+		<arg name="config_file"           value="$(find xunjian_nav)/config/yocs_velocity_smoother.yaml"/>
+		<arg name="raw_cmd_vel_topic"     value="cmd_vel"/>
+		<arg name="smooth_cmd_vel_topic"  value="smoother_cmd_vel"/>
+		<!--<arg name="robot_cmd_vel_topic"   value="robot_cmd_vel"/>-->
+		<arg name="odom_topic"            value="odom"/>
+	</include>
+
+</launch> 

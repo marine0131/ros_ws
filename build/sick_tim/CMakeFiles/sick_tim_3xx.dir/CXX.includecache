@@ -84,6 +84,10 @@ libusb.h
 sick_tim_common.h
 /home/whj/catkin_ws/src/sick_tim/include/sick_tim/sick_tim_common.h
 
+/home/whj/catkin_ws/src/sick_tim/src/abstract_parser.cpp
+sick_tim/abstract_parser.h
+-
+
 /home/whj/catkin_ws/src/sick_tim/src/sick_tim_common.cpp
 sick_tim/sick_tim_common.h
 -

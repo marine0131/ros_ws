@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "/home/whj/catkin_ws/devel/include/my_tutorial/GridLaser.h"
   "/home/whj/catkin_ws/devel/include/my_tutorial/GridPoint.h"
   "/home/whj/catkin_ws/devel/include/my_tutorial/Encoder.h"
+  "/home/whj/catkin_ws/devel/include/my_tutorial/Sonar.h"
   "/home/whj/catkin_ws/devel/include/my_tutorial/GridPose.h"
   "/home/whj/catkin_ws/devel/include/my_tutorial/Position.h"
   "/home/whj/catkin_ws/devel/include/my_tutorial/NavGoal.h"

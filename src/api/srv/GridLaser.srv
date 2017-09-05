@@ -1,0 +1,7 @@
+string request
+---
+GridPoint[] laserPoint
+int32 mapGridWidth
+int32 mapGridHeight
+float32 mapResolution
+string msg

@@ -56,6 +56,7 @@ add_message_files(
    GridLaser.msg
    GridPoint.msg
    NavGoal.msg
+   Sonar.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -142,10 +143,10 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(roslaunch_api src/roslaunch_api.cpp)
-target_link_libraries(roslaunch_api
-   ${catkin_LIBRARIES}
- )
+# add_executable(roslaunch_api src/roslaunch_api.cpp)
+# target_link_libraries(roslaunch_api
+#    ${catkin_LIBRARIES}
+#  )
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
