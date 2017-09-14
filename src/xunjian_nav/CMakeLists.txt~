@@ -6,7 +6,6 @@ project(xunjian_nav)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  serial
   rospy
   std_msgs
   geometry_msgs
@@ -109,18 +108,9 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(serial_node src/serial_node.cpp )
-target_link_libraries(serial_node
-   ${catkin_LIBRARIES}
- )
 
 add_executable(odometry_pub src/odometry_pub.cpp )
 target_link_libraries(odometry_pub
-   ${catkin_LIBRARIES}
- )
-
-add_executable(ultrasound_pub src/ultrasound_pub.cpp )
-target_link_libraries(ultrasound_pub
    ${catkin_LIBRARIES}
  )
 

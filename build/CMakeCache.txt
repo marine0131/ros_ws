@@ -273,10 +273,16 @@ actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
-api_BINARY_DIR:STATIC=/home/whj/catkin_ws/build/api
+api_BINARY_DIR:STATIC=/home/whj/catkin_ws/build/api/api
 
 //Value Computed by CMake
-api_SOURCE_DIR:STATIC=/home/whj/catkin_ws/src/api
+api_SOURCE_DIR:STATIC=/home/whj/catkin_ws/src/api/api
+
+//Value Computed by CMake
+api_msgs_BINARY_DIR:STATIC=/home/whj/catkin_ws/build/api/api_msgs
+
+//Value Computed by CMake
+api_msgs_SOURCE_DIR:STATIC=/home/whj/catkin_ws/src/api/api_msgs
 
 //Value Computed by CMake
 cartographer_turtlebot_BINARY_DIR:STATIC=/home/whj/catkin_ws/build/cartographer_turtlebot/cartographer_turtlebot
@@ -461,9 +467,6 @@ rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 
-//The directory containing a CMake configuration file for serial.
-serial_DIR:PATH=/home/whj/ros/devel/share/serial/cmake
-
 //Dependencies for the target
 sick_tim_3xx_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;usb-1.0;
 
@@ -622,7 +625,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=23
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

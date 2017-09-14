@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/whj/catkin_ws/devel/include/xunjian_nav/Encoder.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
 /home/whj/catkin_ws/src/xunjian_nav/src/odometry_pub.cpp
 ros/ros.h
 -

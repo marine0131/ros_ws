@@ -3,6 +3,6 @@ prefix=/home/whj/catkin_ws/devel
 Name: api
 Description: Description of api
 Version: 0.0.0
-Cflags: -I/home/whj/catkin_ws/devel/include -I/home/whj/catkin_ws/src/api/include
+Cflags: -I/home/whj/catkin_ws/src/api/api/include
 Libs: -L/home/whj/catkin_ws/devel/lib -lapi
-Requires: roscpp rospy std_msgs message_runtime
+Requires: roscpp rospy std_msgs

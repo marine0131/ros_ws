@@ -81,7 +81,6 @@ odometry_pub_EXTERNAL_OBJECTS =
 
 /home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: xunjian_nav/CMakeFiles/odometry_pub.dir/src/odometry_pub.cpp.o
 /home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: xunjian_nav/CMakeFiles/odometry_pub.dir/build.make
-/home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: /home/whj/ros/devel/lib/libserial.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: /opt/ros/indigo/lib/libtf.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: /opt/ros/indigo/lib/libtf2_ros.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/odometry_pub: /opt/ros/indigo/lib/libactionlib.so

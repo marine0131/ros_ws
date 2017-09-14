@@ -19,7 +19,6 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/whj/catkin_ws/devel/include"
   "/home/whj/catkin_ws/src/xunjian_nav/include"
   "/opt/ros/indigo/include"
-  "/home/whj/ros/src/serial/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

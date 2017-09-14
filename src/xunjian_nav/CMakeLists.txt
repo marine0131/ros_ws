@@ -6,7 +6,6 @@ project(xunjian_nav)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  serial
   rospy
   std_msgs
   geometry_msgs
@@ -88,7 +87,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES xunjian_nav
-  CATKIN_DEPENDS roscpp rospy std_msgs serial message_runtime
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
   DEPENDS system_lib
 )
 

@@ -81,7 +81,6 @@ pose_publisher_EXTERNAL_OBJECTS =
 
 /home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: xunjian_nav/CMakeFiles/pose_publisher.dir/src/pose_publisher.cpp.o
 /home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: xunjian_nav/CMakeFiles/pose_publisher.dir/build.make
-/home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: /home/whj/ros/devel/lib/libserial.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: /opt/ros/indigo/lib/libtf.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: /opt/ros/indigo/lib/libtf2_ros.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/pose_publisher: /opt/ros/indigo/lib/libactionlib.so

@@ -1,8 +1,0 @@
-prefix=/home/whj/catkin_ws/install
-
-Name: api
-Description: Description of api
-Version: 0.0.0
-Cflags: -I/home/whj/catkin_ws/install/include
-Libs: -L/home/whj/catkin_ws/install/lib -lapi
-Requires: roscpp rospy std_msgs message_runtime

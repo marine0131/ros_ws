@@ -81,7 +81,6 @@ rotate_EXTERNAL_OBJECTS =
 
 /home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: xunjian_nav/CMakeFiles/rotate.dir/src/rotate.cpp.o
 /home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: xunjian_nav/CMakeFiles/rotate.dir/build.make
-/home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: /home/whj/ros/devel/lib/libserial.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: /opt/ros/indigo/lib/libtf.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: /opt/ros/indigo/lib/libtf2_ros.so
 /home/whj/catkin_ws/devel/lib/xunjian_nav/rotate: /opt/ros/indigo/lib/libactionlib.so
