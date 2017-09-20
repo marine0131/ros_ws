@@ -1,25 +1,31 @@
 #!/usr/bin/env python
 import rospy
 import math
+import os
+import json
 from tf import TransformListener, transformations
-from geometry_msgs.msg import PoseStamped, PointStamped, PoseWithCovarianceStamped
+from geometry_msgs.msg import PointStamped, PoseWithCovarianceStamped
 from nav_msgs.msg import OccupancyGrid
 from move_base_msgs.msg import MoveBaseGoal
-from api_msgs.srv import GridPose, GridPoseResponse, SetGoal, SetGoalResponse, SetInitialPose, SetInitialPoseResponse
+from api_msgs.srv import GridPose, GridPoseResponse, SetGoal, SetGoalResponse
+from api_msgs.srv import CustomInitialize, CustomInitializeResponse, PredefinedInitialize, PredefinedInitializeResponse
 
 
 class RobotPoseSrv():
-    def __init__(self, map_frame, robot_frame):
+    def __init__(self, map_frame, robot_frame, pkg_path):
         self.robot_frame = robot_frame
         self.map_frame = map_frame
-        self.pose = PoseStamped()
+        self.pkg_path = pkg_path
         self.mapinfo = OccupancyGrid()
-        rospy.Subscriber("pose", PoseStamped, self.pose_callback)
         rospy.Subscriber("map", OccupancyGrid, self.map_callback)
         # pose_pub = rospy.Publisher('grid_pose',GridPose,queue_size=10)
         rospy.Service('api/grid_pose', GridPose, self.handle_pose)
         rospy.Service('api/set_goal', SetGoal, self.handle_goal)
-        rospy.Service('api/set_initial_pose', SetInitialPose, self.handle_setinitialpose)
+        rospy.Service('api/custom_initialize', CustomInitialize, self.handle_custominitialize)
+        rospy.Service('api/predefined_initialize', PredefinedInitialize, self.handle_predefinedinitialize)
+
+        self.custom_goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=10)
+        self.initial_pose_pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped, queue_size = 1)
         self.tf_listener = TransformListener()
 
         # rate=rospy.Rate(5)
@@ -30,9 +36,6 @@ class RobotPoseSrv():
         #         rospy.loginfo('grid pose(%d,%d)',pose_grid.grid_x,pose_grid.grid_y)
         #         pose_pub.publish(pose_grid)
         #     rate.sleep()
-
-    def pose_callback(self, msg):
-        self.pose.pose = msg.pose
 
     def map_callback(self, msg):
         self.mapinfo.info = msg.info
@@ -65,28 +68,25 @@ class RobotPoseSrv():
             grid_pose.msg = 'success'
         except Exception:
             grid_pose.msg = 'fail to request robot pose'
-        #rospy.loginfo(grid_pose)
+        # rospy.loginfo(grid_pose)
         return grid_pose
 
     def handle_goal(self, req):
         rospy.loginfo('recieve a custom goal: x %d, y %d', req.grid_x, req.grid_y)
         g = MoveBaseGoal()
         res = SetGoalResponse()
-        try:
-            goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=10)
-            g.target_pose.pose.position.x = (
-                req.grid_x * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.x)
-            g.target_pose.pose.position.y = (
-                req.grid_y * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.y)
-            goal_pub.publish(g)
-            res.msg = 'success'
-        except Exception:
-            res.msg = 'set goal failed'
+        g.target_pose.pose.position.x = (req.grid_x * self.mapinfo.info.resolution
+                                         + self.mapinfo.info.origin.position.x)
+        g.target_pose.pose.position.y = (req.grid_y * self.mapinfo.info.resolution
+                                         + self.mapinfo.info.origin.position.y)
+        g.target_pose.pose.orientation.w = 1.0
+        self.custom_goal_pub.publish(g)
+        res.msg = 'success'
         return res
 
-    def handle_setinitialpose(self, req):
+    def handle_custominitialize(self, req):
         rospy.loginfo('initalize...')
-        res = SetInitialPoseResponse()
+        res = CustomInitializeResponse()
         pose = PoseWithCovarianceStamped()
         pose.header.frame_id = self.map_frame
         pose.header.stamp = rospy.Time.now()
@@ -110,14 +110,51 @@ class RobotPoseSrv():
             res.msg = 'success'
         except Exception:
             res.msg = 'error with calculate'
+            return res
 
-        initial_pose_pub = rospy.Publisher('initialpose',PoseWithCovarianceStamped, queue_size = 1)
-        initial_pose_pub.publish(pose)
+        self.initial_pose_pub.publish(pose)
         return res
 
+    def handle_predefinedinitialize(self, req):
+        rospy.loginfo('initalize...')
+        res = PredefinedInitializeResponse()
+        pose = PoseWithCovarianceStamped()
+        pose.header.frame_id = self.map_frame
+        pose.header.stamp = rospy.Time.now()
+        pose.pose.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                0.0, 0.25, 0.0, 0.0, 0.0, 0.0,
+                                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                0.0, 0.0, 0.0, 0.0, 0.0, 0.06853891945200942]
+        file_name = os.path.join(self.pkg_path, 'goals/' + req.mapName + '.json')
+        try:
+            with open(file_name, 'r') as f:
+                goal_dict = json.load(f)
+        except Exception:
+            res.msg = 'map not exist'
+            return res
+        if req.goalName in goal_dict:
+            pose.pose.pose.orientation.x = goal_dict[req.goalName]['orientation']['x']
+            pose.pose.pose.orientation.y = goal_dict[req.goalName]['orientation']['y']
+            pose.pose.pose.orientation.z = goal_dict[req.goalName]['orientation']['z']
+            pose.pose.pose.orientation.w = goal_dict[req.goalName]['orientation']['w']
+            pose.pose.pose.position.x = goal_dict[req.goalName]['position']['x']
+            pose.pose.pose.position.y = goal_dict[req.goalName]['position']['y']
+            pose.pose.pose.position.z = goal_dict[req.goalName]['position']['z']
+            res.msg = 'succuss'
+        else:
+            res.msg = 'goal not exist'
+            return res
+
+        self.initial_pose_pub.publish(pose)
+        return res
+
+
 if __name__ == '__main__':
-    rospy.init_node('grid_pose_server', anonymous=True)
+    rospy.init_node('pose_server', anonymous=True)
     robot_frame = rospy.get_param('~robot_frame', 'base_link')
     map_frame = rospy.get_param('~map_frame', 'map')
-    RobotPoseSrv(map_frame, robot_frame)
+    pkg_path = rospy.get_param('~pkg_path', '/home/whj/catkin_ws/src/api/api/')
+    RobotPoseSrv(map_frame, robot_frame, pkg_path)
     rospy.spin()

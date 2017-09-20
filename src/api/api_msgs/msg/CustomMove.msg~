@@ -1,0 +1,5 @@
+string linear_or_angluar
+float32 vel
+float32 dist
+---
+string  msg

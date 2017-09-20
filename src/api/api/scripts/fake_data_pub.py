@@ -7,7 +7,7 @@ from xunjian_nav.msg import Encoder, Sonar
 
 class FakeDataPub():
     def __init__(self):
-        rospy.Subscriber('cmd_vel', Twist, self.cmdvel_callback, queue_size = 1)
+        rospy.Subscriber('cmd_vel', Twist, self.cmdvel_callback)
         laser_pub = rospy.Publisher('scan', LaserScan, queue_size=1)
         enc_pub = rospy.Publisher('encoder', Encoder, queue_size=1)
         # pose_pub = rospy.Publisher('pose', PoseStamped, queue_size=1)

@@ -6,6 +6,6 @@
   :components ((:file "_package")
     (:file "GridPoint" :depends-on ("_package_GridPoint"))
     (:file "_package_GridPoint" :depends-on ("_package"))
-    (:file "NavGoal" :depends-on ("_package_NavGoal"))
-    (:file "_package_NavGoal" :depends-on ("_package"))
+    (:file "CustomMoveCmd" :depends-on ("_package_CustomMoveCmd"))
+    (:file "_package_CustomMoveCmd" :depends-on ("_package"))
   ))

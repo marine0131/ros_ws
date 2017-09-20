@@ -8,10 +8,12 @@ from std_srvs.srv import Empty, EmptyRequest, Trigger, TriggerResponse
 class NavGoal():
     def __init__(self):
         rospy.Subscriber("goal", MoveBaseGoal, self.goal_callback)
-        rospy.Service("nav/resume", Trigger, self.handle_resume)
-        rospy.Service("nav/cancel", Trigger, self.handle_cancel)
-        rospy.Service("nav/get_status", Trigger, self.handle_status)
+        rospy.Service("nav_goal/resume", Trigger, self.handle_resume)
+        rospy.Service("nav_goal/cancel", Trigger, self.handle_cancel)
+        rospy.Service("nav_goal/get_status", Trigger, self.handle_status)
 
+        self.clear_map_client = rospy.ServiceProxy("move_base/clear_costmaps",
+                                                   Empty)
         self.ac = SimpleActionClient('move_base', MoveBaseAction)
         self.current_goal = MoveBaseGoal()
 
@@ -19,8 +21,7 @@ class NavGoal():
         rospy.loginfo('recieve a goal')
         # clear map
         req = EmptyRequest()
-        clear_map_client = rospy.ServiceProxy("move_base/clear_costmaps", Empty)
-        clear_map_client.call(req)
+        self.clear_map_client.call(req)
 
         # call goal service
         self.ac.wait_for_server()
@@ -43,7 +44,11 @@ class NavGoal():
     def handle_resume(self, req):
         rospy.loginfo('resume current goal')
         res = TriggerResponse()
-        self.goal_callback(self.current_goal) # restart last goal
+        try:
+            self.goal_callback(self.current_goal)  # restart last goal
+        except Exception:
+            res.message = 'fail'
+            return res
         res.success = True
         res.message = "success"
         return res
@@ -51,7 +56,7 @@ class NavGoal():
     def handle_cancel(self, req):
         rospy.loginfo('cancel current goal')
         res = TriggerResponse()
-        self.ac.cancel_goal()
+        # self.ac.cancel_goal()
         self.ac.cancel_all_goals()
         res.success = True
         res.message = "success"
@@ -67,6 +72,7 @@ class NavGoal():
             res.success = False
             res.message = 'can not get status'
         return res
+
 
 if __name__ == '__main__':
     rospy.init_node("nav_goal")

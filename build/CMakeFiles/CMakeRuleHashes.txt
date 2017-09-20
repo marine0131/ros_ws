@@ -1,5 +1,8 @@
 # Hashes of file build rules.
 9c134503115cb06cd317de4180a2ec9a /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h
+8d4cb2c81178f43c64ab3fc9660fd2cd /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h
+7278f98094180fa71ca40560d69f6b35 /home/whj/catkin_ws/devel/include/api_msgs/CustomMove.h
+c4652a5e016851a3ccca3ec9c0a874f8 /home/whj/catkin_ws/devel/include/api_msgs/CustomMoveCmd.h
 6159c4198ad267975d7e28aa918896fb /home/whj/catkin_ws/devel/include/api_msgs/DelGoal.h
 32aed420a9d6b2898d35173d3f2da546 /home/whj/catkin_ws/devel/include/api_msgs/DelMap.h
 133c5c4bb3683a487e084160cfbb5e95 /home/whj/catkin_ws/devel/include/api_msgs/GoalList.h
@@ -14,6 +17,7 @@ a376df9857f08221987d6cd49e18ac7e /home/whj/catkin_ws/devel/include/api_msgs/MapD
 d8119b32db50d09f4f7392f4631dba2f /home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h
 6f15cea5b3cf8ad584ce62175f91ee9d /home/whj/catkin_ws/devel/include/api_msgs/NavGoal.h
 ecd24948305f7f20f59a61d567f3aa82 /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h
+cbf3167c1e734b25bd90bb237e87459f /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h
 cda08a7e7083173fb4e5009fe1768037 /home/whj/catkin_ws/devel/include/api_msgs/RenameGoal.h
 4fe66b7c00d708695c4bed26219d59aa /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h
 172f6b6814379e60e36346af3cb57277 /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h
@@ -93,10 +97,13 @@ ba0450a20dfab317e63cbd2c420db9b5 /home/whj/catkin_ws/devel/include/tcp_comm/Ultr
 0246e88baa37024d4fcf0beb3698650f /home/whj/catkin_ws/devel/include/xunjian_nav/Encoder.h
 410f0c4b83f23d9dbf8459868eda62e4 /home/whj/catkin_ws/devel/include/xunjian_nav/Sonar.h
 a20121ea973519101aa38296f06cb5f2 /home/whj/catkin_ws/devel/include/xunjian_nav/Ultrasound.h
+4dfe5a40a73cf4091456eda4c0ef99da /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_CustomMoveCmd.py
 8fef130a5d5d4ae840a256df1b2a4fab /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_GridPoint.py
 4ebe9bb33b9e986a6255b7a4fdec983f /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_NavGoal.py
 d807fb587ee03d11bc4861fa0fbd805a /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py
 497c0ddbb45381379bf7f74915e77c35 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py
+0b6273bc304deb0b54f4aac3ef5ace60 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py
+292d7b60d0aa44ea8db58c6c12a0d60f /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomMove.py
 a1966290830b75b927e97af1442b94ef /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelGoal.py
 be023861b482a371fd544ee7413a7a88 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py
 b6af765a8ab1df75d77ad28bc6b11943 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
@@ -110,6 +117,7 @@ fef202c269f65d11b1974cc91e756586 /home/whj/catkin_ws/devel/lib/python2.7/dist-pa
 0b4f3c2eac34b99023538758113804e9 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py
 46a45827d382b8ad3de770378c8795f9 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavGoal.py
 b2317ad55f5c2fcd4dd88ab3fe75919b /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py
+76d1d7d7f8f852430d2f1c198a163268 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py
 08690ecc3f0af660b3cb45502caff8ba /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameGoal.py
 9f1ec0a1a90112432012c17dbe2d12bb /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py
 af5435685c4975214ead2feab2d737ce /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py
@@ -196,9 +204,12 @@ a25f5febd60ebf6536412fa48c8489f4 /home/whj/catkin_ws/devel/lib/python2.7/dist-pa
 982a758f6f02217999e6702ee4ab7d14 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/xunjian_nav/msg/_Sonar.py
 3211fd71f7a1ffa1e2a960a3fb2c6b8e /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/xunjian_nav/msg/_Ultrasound.py
 e2a927e857f12a3f3df60aa203be11b5 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/xunjian_nav/msg/__init__.py
+e866801a83ac84f3126ca021e9386b8a /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/msg/CustomMoveCmd.lisp
 c7890c598e66222f11d4d8310ad63d5f /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/msg/GridPoint.lisp
 8e185b44f6270ddd4a3ee847123cc5bd /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/msg/NavGoal.lisp
 9746c93ba411d5d883a1d0296f4d9963 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/AddGoal.lisp
+a41f2f4a68f888a604a3627f8fed599a /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp
+6bfd6dff24cebb9b1950476e2b7b605d /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomMove.lisp
 4fb3768f755067c5df3dd2f2a8248ca1 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelGoal.lisp
 181b3ae483b33c02df01312a7b308dc4 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelMap.lisp
 61c69b143fff603d1a34f6e82719ba2b /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp
@@ -212,6 +223,7 @@ b4bcd6582cc64953520dbe49809b694f /home/whj/catkin_ws/devel/share/common-lisp/ros
 5afd19b2835ad136171cc789efe7c861 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapToPng.lisp
 bcbef655af31646417554250a8cae5de /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavGoal.lisp
 9574f767cefd332dcfddb653e8804e14 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavToGoal.lisp
+76ecbb41dd3601453e6d84861a2b10a1 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/PredefinedInitialize.lisp
 5bd6a6085d8845022d78b9201eb4756c /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameGoal.lisp
 84cae62582085a47fc3641a7d9b5b23c /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameMap.lisp
 741ded37f0440b2025b42cccdc16fc47 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SetGoal.lisp
@@ -303,6 +315,8 @@ c91d685725991a0c0c35dff1f18bbdf3 /home/whj/catkin_ws/devel/share/common-lisp/ros
 3919245bd9be901bf890ad1f45e37004 api/api/CMakeFiles/std_msgs_generate_messages_lisp
 3919245bd9be901bf890ad1f45e37004 api/api/CMakeFiles/std_msgs_generate_messages_py
 5502bb03e145deafcd090483a3dcc014 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_AddGoal
+b8802894eab07de978effceaa1be1a82 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize
+83cb48320ac4529460da3e49bc771e97 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd
 a280d11a6d66063045819250a053b4e5 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal
 4d247c45d37dcb1bac92e7e7b8888e85 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap
 ee35c7f33d4adcd0599da84735623d3e api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GoalList
@@ -315,10 +329,10 @@ cabddcb73772e90b75380f2700c72acc api/api_msgs/CMakeFiles/_api_msgs_generate_mess
 07cb6a53599ee31234582a5d0513e469 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList
 068882b6720eee0aafdfb11316bb01a3 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng
 3f365b5cc4d315e9472f01ff4ad61c13 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_NavToGoal
+dd59167467de65087c7cbab78fbf3106 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize
 382948c6b94650a736b32a9d20cb0ee3 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameGoal
 d577bb17574342818f12920fdc31865d api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameMap
 aeb9d6002ac2b86b3fedbead4baef6ed api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal
-55b7581ce4cc9c8f1be5933aafdf1d3b api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose
 3dec8471e21e32487a7517d8fdff20a3 api/api_msgs/CMakeFiles/api_msgs_gencpp
 3dec8471e21e32487a7517d8fdff20a3 api/api_msgs/CMakeFiles/api_msgs_generate_messages
 3dec8471e21e32487a7517d8fdff20a3 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp

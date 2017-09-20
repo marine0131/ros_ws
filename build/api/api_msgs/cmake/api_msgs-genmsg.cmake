@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "api_msgs: 1 messages, 16 services")
+message(STATUS "api_msgs: 2 messages, 17 services")
 
 set(MSG_I_FLAGS "-Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -35,9 +35,14 @@ add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg" ""
 )
 
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv" NAME_WE)
 add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv" "api_msgs/GridPoint"
+)
+
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
+add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" ""
 )
 
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv" NAME_WE)
@@ -45,9 +50,9 @@ add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv" ""
 )
 
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv" NAME_WE)
 add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv" "api_msgs/GridPoint"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv" ""
 )
 
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv" NAME_WE)
@@ -70,9 +75,9 @@ add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv" ""
 )
 
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg" NAME_WE)
 add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg" ""
 )
 
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv" NAME_WE)
@@ -100,12 +105,23 @@ add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv" "api_msgs/GridPoint"
 )
 
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+add_custom_target(_api_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "api_msgs" "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" ""
+)
+
 #
 #  langs = gencpp;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
+)
 _generate_msg_cpp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
   "${MSG_I_FLAGS}"
@@ -133,6 +149,12 @@ _generate_srv_cpp(api_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
 )
 _generate_srv_cpp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv"
+  "${MSG_I_FLAGS}"
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
+)
+_generate_srv_cpp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -146,6 +168,12 @@ _generate_srv_cpp(api_msgs
 )
 _generate_srv_cpp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
+)
+_generate_srv_cpp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
@@ -190,12 +218,6 @@ _generate_srv_cpp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
-)
-_generate_srv_cpp(api_msgs
-  "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv"
-  "${MSG_I_FLAGS}"
-  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/api_msgs
 )
 _generate_srv_cpp(api_msgs
@@ -231,11 +253,13 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapDa
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
@@ -245,7 +269,7 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetGo
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
@@ -257,6 +281,8 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/NavTo
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_cpp _api_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(api_msgs_gencpp)
@@ -267,6 +293,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS api_msgs_generate_messages_cpp)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
+)
 _generate_msg_lisp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
   "${MSG_I_FLAGS}"
@@ -294,6 +326,12 @@ _generate_srv_lisp(api_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
 )
 _generate_srv_lisp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv"
+  "${MSG_I_FLAGS}"
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
+)
+_generate_srv_lisp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -307,6 +345,12 @@ _generate_srv_lisp(api_msgs
 )
 _generate_srv_lisp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
+)
+_generate_srv_lisp(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
@@ -351,12 +395,6 @@ _generate_srv_lisp(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv"
   "${MSG_I_FLAGS}"
   ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
-)
-_generate_srv_lisp(api_msgs
-  "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv"
-  "${MSG_I_FLAGS}"
-  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/api_msgs
 )
 _generate_srv_lisp(api_msgs
@@ -392,11 +430,13 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapDa
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
@@ -406,7 +446,7 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetGo
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
@@ -418,6 +458,8 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/NavTo
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_lisp _api_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(api_msgs_genlisp)
@@ -428,6 +470,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS api_msgs_generate_messages_lisp)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
+)
 _generate_msg_py(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
   "${MSG_I_FLAGS}"
@@ -455,6 +503,12 @@ _generate_srv_py(api_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
 )
 _generate_srv_py(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv"
+  "${MSG_I_FLAGS}"
+  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
+)
+_generate_srv_py(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -468,6 +522,12 @@ _generate_srv_py(api_msgs
 )
 _generate_srv_py(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
+)
+_generate_srv_py(api_msgs
+  "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
@@ -515,12 +575,6 @@ _generate_srv_py(api_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
 )
 _generate_srv_py(api_msgs
-  "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv"
-  "${MSG_I_FLAGS}"
-  "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/api_msgs
-)
-_generate_srv_py(api_msgs
   "/home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -553,11 +607,13 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapDa
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
@@ -567,7 +623,7 @@ get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/SetGo
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv" NAME_WE)
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
@@ -578,6 +634,8 @@ add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv" NAME_WE)
+add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv" NAME_WE)
 add_dependencies(api_msgs_generate_messages_py _api_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

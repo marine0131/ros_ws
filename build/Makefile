@@ -358,6 +358,32 @@ _api_msgs_generate_messages_check_deps_AddGoal/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_AddGoal/fast
 
 #=============================================================================
+# Target rules for targets named _api_msgs_generate_messages_check_deps_CustomInitialize
+
+# Build rule for target.
+_api_msgs_generate_messages_check_deps_CustomInitialize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _api_msgs_generate_messages_check_deps_CustomInitialize
+.PHONY : _api_msgs_generate_messages_check_deps_CustomInitialize
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_CustomInitialize/fast:
+	$(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_CustomInitialize/fast
+
+#=============================================================================
+# Target rules for targets named _api_msgs_generate_messages_check_deps_CustomMoveCmd
+
+# Build rule for target.
+_api_msgs_generate_messages_check_deps_CustomMoveCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _api_msgs_generate_messages_check_deps_CustomMoveCmd
+.PHONY : _api_msgs_generate_messages_check_deps_CustomMoveCmd
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_CustomMoveCmd/fast:
+	$(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_CustomMoveCmd/fast
+
+#=============================================================================
 # Target rules for targets named _api_msgs_generate_messages_check_deps_DelGoal
 
 # Build rule for target.
@@ -514,6 +540,19 @@ _api_msgs_generate_messages_check_deps_NavToGoal/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_NavToGoal/fast
 
 #=============================================================================
+# Target rules for targets named _api_msgs_generate_messages_check_deps_PredefinedInitialize
+
+# Build rule for target.
+_api_msgs_generate_messages_check_deps_PredefinedInitialize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _api_msgs_generate_messages_check_deps_PredefinedInitialize
+.PHONY : _api_msgs_generate_messages_check_deps_PredefinedInitialize
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_PredefinedInitialize/fast:
+	$(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_PredefinedInitialize/fast
+
+#=============================================================================
 # Target rules for targets named _api_msgs_generate_messages_check_deps_RenameGoal
 
 # Build rule for target.
@@ -551,19 +590,6 @@ _api_msgs_generate_messages_check_deps_SetGoal: cmake_check_build_system
 _api_msgs_generate_messages_check_deps_SetGoal/fast:
 	$(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build
 .PHONY : _api_msgs_generate_messages_check_deps_SetGoal/fast
-
-#=============================================================================
-# Target rules for targets named _api_msgs_generate_messages_check_deps_SetInitialPose
-
-# Build rule for target.
-_api_msgs_generate_messages_check_deps_SetInitialPose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _api_msgs_generate_messages_check_deps_SetInitialPose
-.PHONY : _api_msgs_generate_messages_check_deps_SetInitialPose
-
-# fast build rule for target.
-_api_msgs_generate_messages_check_deps_SetInitialPose/fast:
-	$(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/build
-.PHONY : _api_msgs_generate_messages_check_deps_SetInitialPose/fast
 
 #=============================================================================
 # Target rules for targets named api_msgs_gencpp
@@ -2934,6 +2960,8 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _api_msgs_generate_messages_check_deps_AddGoal"
+	@echo "... _api_msgs_generate_messages_check_deps_CustomInitialize"
+	@echo "... _api_msgs_generate_messages_check_deps_CustomMoveCmd"
 	@echo "... _api_msgs_generate_messages_check_deps_DelGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_DelMap"
 	@echo "... _api_msgs_generate_messages_check_deps_GoalList"
@@ -2946,10 +2974,10 @@ help:
 	@echo "... _api_msgs_generate_messages_check_deps_MapList"
 	@echo "... _api_msgs_generate_messages_check_deps_MapToPng"
 	@echo "... _api_msgs_generate_messages_check_deps_NavToGoal"
+	@echo "... _api_msgs_generate_messages_check_deps_PredefinedInitialize"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameMap"
 	@echo "... _api_msgs_generate_messages_check_deps_SetGoal"
-	@echo "... _api_msgs_generate_messages_check_deps_SetInitialPose"
 	@echo "... api_msgs_gencpp"
 	@echo "... api_msgs_generate_messages"
 	@echo "... api_msgs_generate_messages_cpp"

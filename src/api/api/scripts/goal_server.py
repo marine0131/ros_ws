@@ -24,6 +24,8 @@ class GoalListSrv():
 
         rospy.Subscriber("map", OccupancyGrid, self.map_callback)
         rospy.Subscriber('pose', PoseStamped, self.pose_callback)
+
+        self.goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=1)
         # for test
         # rospy.Subscriber('map_metadata', MapMetaData, self.pose_callback)
 
@@ -34,7 +36,7 @@ class GoalListSrv():
         self.mapinfo.info = msg.info
 
     def handle_navgoal(self, req):
-        goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=1)
+        rospy.loginfo('nav to goal %s in map %s', req.goalName, req.mapName)
         goal_msg = MoveBaseGoal()
         res = NavToGoalResponse()
 
@@ -45,6 +47,8 @@ class GoalListSrv():
         except IOError:
             rospy.logerr('fail to open file')
 
+        goal_msg.target_pose.header.frame_id = 'map'
+        goal_msg.target_pose.header.stamp = rospy.Time.now()
         if req.goalName in goal_dict:
             goal_msg.target_pose.pose.orientation.x = goal_dict[req.goalName]['orientation']['x']
             goal_msg.target_pose.pose.orientation.y = goal_dict[req.goalName]['orientation']['y']
@@ -59,7 +63,7 @@ class GoalListSrv():
             res.msg = 'goal not exist'
             return res
         # rospy.loginfo(goal_msg)
-        goal_pub.publish(goal_msg)
+        self.goal_pub.publish(goal_msg)
         return res
 
     def handle_renamegoal(self, req):
@@ -172,7 +176,9 @@ class GoalListSrv():
 
         # key_list = list(goal_dict.keys())
         # res.goalList = ';'.join(key_list)
-        res.goalList = json.dumps(goal_dict)
+        goal_grid_dict = dict((name, goal_dict[name]['grid']) for name in goal_dict)
+
+        res.goalList = json.dumps(goal_grid_dict)
         return res
 
 

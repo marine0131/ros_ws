@@ -33,7 +33,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/api_msgs/msg" TYPE FILE FILES "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/api_msgs/msg" TYPE FILE FILES
+    "/home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg"
+    "/home/whj/catkin_ws/src/api/api_msgs/msg/CustomMoveCmd.msg"
+    )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -53,7 +56,8 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameGoal.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv"
-    "/home/whj/catkin_ws/src/api/api_msgs/srv/SetInitialPose.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

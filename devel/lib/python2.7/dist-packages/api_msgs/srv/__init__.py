@@ -1,4 +1,6 @@
 from ._AddGoal import *
+from ._CustomInitialize import *
+from ._CustomMove import *
 from ._DelGoal import *
 from ._DelMap import *
 from ._GoalList import *
@@ -12,6 +14,7 @@ from ._MapRename import *
 from ._MapToPng import *
 from ._NavGoal import *
 from ._NavToGoal import *
+from ._PredefinedInitialize import *
 from ._RenameGoal import *
 from ._RenameMap import *
 from ._SetGoal import *

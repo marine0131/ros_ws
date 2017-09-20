@@ -39,7 +39,7 @@
     </node>
     
     <!--pose server-->
-    <node name="grid_pose_server" pkg="api" type="grid_pose_server.py" output="screen">
+    <node name="pose_server" pkg="api" type="pose_server.py" output="screen">
     	<param name="robot_frame" value="$(arg robot_frame)"/>
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
@@ -54,6 +54,12 @@
     	<param name="sonar_frame" value="$(arg sonar_frame)" />
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
+	
+	<!--*******************************nav_goal********************************-->
+	<node pkg="nav_goal" type="nav_goal.py" name="nav_goal" output="screen" />
+	<node pkg="nav_goal" type="custom_move.py" name="custom_move" output="screen">
+		<param name="vel_topic" type="string" value="cmd_vel" />
+	</node>
 	
     <!--===========================================================================================-->
     <node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"  />

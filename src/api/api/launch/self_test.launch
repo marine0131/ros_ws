@@ -29,7 +29,7 @@
 	</node>
 
     <!--static map server-->
-	<node name="static_map_server" pkg="api" type="static_map_server.py" >
+	<node name="static_map_server" pkg="api" type="static_map_server.py" output="screen" >
 		<param name="api_pkg_path" value="$(arg api_pkg_path)" />
 	</node> 
 	
@@ -39,7 +39,7 @@
     </node>
     
     <!--pose server-->
-    <node name="grid_pose_server" pkg="api" type="grid_pose_server.py" >
+    <node name="pose_server" pkg="api" type="pose_server.py" output="screen" >
     	<param name="robot_frame" value="$(arg robot_frame)"/>
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
@@ -72,6 +72,9 @@
     	<rosparam file="$(find xunjian_nav)/config/global_costmap_params.yaml" command="load" />
     	<rosparam file="$(find xunjian_nav)/config/base_local_planner_params.yaml" command="load" />
   	</node>
+  	
+	<!--*************rotate for initialize ************-->
+	<node pkg="xunjian_nav" name="rotate" type="rotate" output="screen"/>
 	
 	<!--*************pose publisher***************-->
     <node pkg="xunjian_nav" name="pose_publisher" type="pose_publisher">

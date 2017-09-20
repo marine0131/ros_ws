@@ -164,6 +164,34 @@ _api_msgs_generate_messages_check_deps_AddGoal/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_AddGoal/fast
 
 # Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_CustomInitialize: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_CustomInitialize
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_CustomInitialize/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_CustomInitialize/fast
+
+# Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_CustomMoveCmd: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_CustomMoveCmd
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_CustomMoveCmd/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_CustomMoveCmd/fast
+
+# Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule
 .PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule
@@ -332,6 +360,20 @@ _api_msgs_generate_messages_check_deps_NavToGoal/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_NavToGoal/fast
 
 # Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_PredefinedInitialize: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_PredefinedInitialize
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_PredefinedInitialize/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_PredefinedInitialize/fast
+
+# Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameGoal.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameGoal.dir/rule
 .PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameGoal.dir/rule
@@ -372,20 +414,6 @@ _api_msgs_generate_messages_check_deps_SetGoal: api/api_msgs/CMakeFiles/_api_msg
 _api_msgs_generate_messages_check_deps_SetGoal/fast:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build
 .PHONY : _api_msgs_generate_messages_check_deps_SetGoal/fast
-
-# Convenience name for target.
-api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/rule
-.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/rule
-
-# Convenience name for target.
-_api_msgs_generate_messages_check_deps_SetInitialPose: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/rule
-.PHONY : _api_msgs_generate_messages_check_deps_SetInitialPose
-
-# fast build rule for target.
-_api_msgs_generate_messages_check_deps_SetInitialPose/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir/build
-.PHONY : _api_msgs_generate_messages_check_deps_SetInitialPose/fast
 
 # Convenience name for target.
 api/api_msgs/CMakeFiles/api_msgs_gencpp.dir/rule:
@@ -492,6 +520,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... _api_msgs_generate_messages_check_deps_AddGoal"
+	@echo "... _api_msgs_generate_messages_check_deps_CustomInitialize"
+	@echo "... _api_msgs_generate_messages_check_deps_CustomMoveCmd"
 	@echo "... _api_msgs_generate_messages_check_deps_DelGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_DelMap"
 	@echo "... _api_msgs_generate_messages_check_deps_GoalList"
@@ -504,10 +534,10 @@ help:
 	@echo "... _api_msgs_generate_messages_check_deps_MapList"
 	@echo "... _api_msgs_generate_messages_check_deps_MapToPng"
 	@echo "... _api_msgs_generate_messages_check_deps_NavToGoal"
+	@echo "... _api_msgs_generate_messages_check_deps_PredefinedInitialize"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameMap"
 	@echo "... _api_msgs_generate_messages_check_deps_SetGoal"
-	@echo "... _api_msgs_generate_messages_check_deps_SetInitialPose"
 	@echo "... api_msgs_gencpp"
 	@echo "... api_msgs_generate_messages"
 	@echo "... api_msgs_generate_messages_cpp"

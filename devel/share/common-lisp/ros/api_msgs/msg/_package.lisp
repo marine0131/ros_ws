@@ -3,7 +3,7 @@
   (:export
    "<GRIDPOINT>"
    "GRIDPOINT"
-   "<NAVGOAL>"
-   "NAVGOAL"
+   "<CUSTOMMOVECMD>"
+   "CUSTOMMOVECMD"
   ))
 

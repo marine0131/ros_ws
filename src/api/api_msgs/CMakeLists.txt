@@ -51,6 +51,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   GridPoint.msg
+  CustomMoveCmd.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -71,7 +72,8 @@ add_service_files(
   RenameMap.srv
   RenameGoal.srv
   NavToGoal.srv
-  SetInitialPose.srv
+  CustomInitialize.srv
+  PredefinedInitialize.srv
 )
 
 ## Generate actions in the 'action' folder

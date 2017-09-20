@@ -1,4 +1,6 @@
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_AddGoal.dir
+/home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomInitialize.dir
+/home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_CustomMoveCmd.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GoalList.dir
@@ -11,10 +13,10 @@
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_NavToGoal.dir
+/home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_PredefinedInitialize.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameGoal.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_RenameMap.dir
 /home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir
-/home/whj/catkin_ws/build/api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetInitialPose.dir
 /home/whj/catkin_ws/build/rbx1/rbx1/CMakeFiles/_catkin_empty_exported_target.dir
 /home/whj/catkin_ws/build/my_action_lib/CMakeFiles/_my_action_lib_generate_messages_check_deps_DoDishesAction.dir
 /home/whj/catkin_ws/build/my_action_lib/CMakeFiles/_my_action_lib_generate_messages_check_deps_DoDishesActionFeedback.dir
