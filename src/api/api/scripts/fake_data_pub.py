@@ -44,7 +44,6 @@ class FakeDataPub():
 
         rate = rospy.Rate(15)
         while not rospy.is_shutdown():
-            now = rospy.get_rostime()
             # pose_msg.pose.position.x += 0.01
             # pose_msg.pose.position.y += 0.01
             # pose_msg.pose.orientation.z += 0.01
@@ -56,7 +55,7 @@ class FakeDataPub():
             #     pose_msg.pose.orientation.z = 0.01
             #enc_msg.vx = 0
             #enc_msg.w = 200
-            scan_msg.header.stamp = now
+            scan_msg.header.stamp = rospy.Time.now()
 
             sonar_msg.ranges[0] = sonar_msg.ranges[0] + 0.1 if sonar_msg.ranges[0] < 80 else 20
             sonar_msg.ranges[1] = sonar_msg.ranges[1] + 0.1 if sonar_msg.ranges[1] < 80 else 20
@@ -70,7 +69,6 @@ class FakeDataPub():
             laser_pub.publish(scan_msg)
             sonar_pub.publish(sonar_msg)
             rate.sleep()
-        rospy.spin()
 
     def cmdvel_callback(self, msg):
         rospy.loginfo('recieve cmd_vel: vx=%f,w=%f', msg.linear.x, msg.angular.z)
@@ -81,4 +79,3 @@ class FakeDataPub():
 if __name__ == '__main__':
     rospy.init_node('fake_data_pub')
     FakeDataPub()
-    rospy.spin()

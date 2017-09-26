@@ -132,14 +132,16 @@ import struct
 
 
 class GoalListResponse(genpy.Message):
-  _md5sum = "bc37a6c620124f14e8cc5f76efaf8a76"
+  _md5sum = "e0e77bd42eba6b6333028ed8dd1ac917"
   _type = "api_msgs/GoalListResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string goalList
+  _full_text = """string list
+string tags
+string msg
 
 """
-  __slots__ = ['goalList']
-  _slot_types = ['string']
+  __slots__ = ['list','tags','msg']
+  _slot_types = ['string','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -149,7 +151,7 @@ class GoalListResponse(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       goalList
+       list,tags,msg
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -158,10 +160,16 @@ class GoalListResponse(genpy.Message):
     if args or kwds:
       super(GoalListResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.goalList is None:
-        self.goalList = ''
+      if self.list is None:
+        self.list = ''
+      if self.tags is None:
+        self.tags = ''
+      if self.msg is None:
+        self.msg = ''
     else:
-      self.goalList = ''
+      self.list = ''
+      self.tags = ''
+      self.msg = ''
 
   def _get_types(self):
     """
@@ -175,7 +183,25 @@ class GoalListResponse(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.goalList
+      _x = self.list
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.tags
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -200,9 +226,27 @@ class GoalListResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.goalList = str[start:end].decode('utf-8')
+        self.list = str[start:end].decode('utf-8')
       else:
-        self.goalList = str[start:end]
+        self.list = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.tags = str[start:end].decode('utf-8')
+      else:
+        self.tags = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.msg = str[start:end].decode('utf-8')
+      else:
+        self.msg = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -215,7 +259,25 @@ class GoalListResponse(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.goalList
+      _x = self.list
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.tags
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -241,9 +303,27 @@ class GoalListResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.goalList = str[start:end].decode('utf-8')
+        self.list = str[start:end].decode('utf-8')
       else:
-        self.goalList = str[start:end]
+        self.list = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.tags = str[start:end].decode('utf-8')
+      else:
+        self.tags = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.msg = str[start:end].decode('utf-8')
+      else:
+        self.msg = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -251,6 +331,6 @@ class GoalListResponse(genpy.Message):
 _struct_I = genpy.struct_I
 class GoalList(object):
   _type          = 'api_msgs/GoalList'
-  _md5sum = '6ded0e823bc3364a8e51670166f50c09'
+  _md5sum = 'fb47d7150217a33f4509872a3dab2251'
   _request_class  = GoalListRequest
   _response_class = GoalListResponse

@@ -57,9 +57,11 @@ add_message_files(
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  MapList.srv
+  GetList.srv
+  DownloadFile.srv
+  UploadMap.srv
+  DownloadMap.srv
   MapData.srv
-  MapToPng.srv
   AddGoal.srv
   GoalList.srv
   DelGoal.srv
@@ -68,12 +70,13 @@ add_service_files(
   GridLaser.srv
   SetGoal.srv
   LaunchCmd.srv
-  DelMap.srv
+  DelFile.srv
   RenameMap.srv
   RenameGoal.srv
   NavToGoal.srv
   CustomInitialize.srv
   PredefinedInitialize.srv
+  SaveModifiedMap.srv
 )
 
 ## Generate actions in the 'action' folder

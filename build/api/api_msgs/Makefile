@@ -192,6 +192,20 @@ _api_msgs_generate_messages_check_deps_CustomMoveCmd/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_CustomMoveCmd/fast
 
 # Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_DelFile: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_DelFile
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_DelFile/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelFile.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_DelFile/fast
+
+# Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule
 .PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelGoal.dir/rule
@@ -206,18 +220,46 @@ _api_msgs_generate_messages_check_deps_DelGoal/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_DelGoal/fast
 
 # Convenience name for target.
-api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/rule
-.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/rule
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/rule
 
 # Convenience name for target.
-_api_msgs_generate_messages_check_deps_DelMap: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/rule
-.PHONY : _api_msgs_generate_messages_check_deps_DelMap
+_api_msgs_generate_messages_check_deps_DownloadFile: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_DownloadFile
 
 # fast build rule for target.
-_api_msgs_generate_messages_check_deps_DelMap/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DelMap.dir/build
-.PHONY : _api_msgs_generate_messages_check_deps_DelMap/fast
+_api_msgs_generate_messages_check_deps_DownloadFile/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadFile.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_DownloadFile/fast
+
+# Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_DownloadMap: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_DownloadMap
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_DownloadMap/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_DownloadMap.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_DownloadMap/fast
+
+# Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_GetList: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_GetList
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_GetList/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GetList.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_GetList/fast
 
 # Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_GoalList.dir/rule:
@@ -318,34 +360,6 @@ _api_msgs_generate_messages_check_deps_MapData/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_MapData/fast
 
 # Convenience name for target.
-api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/rule
-.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/rule
-
-# Convenience name for target.
-_api_msgs_generate_messages_check_deps_MapList: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/rule
-.PHONY : _api_msgs_generate_messages_check_deps_MapList
-
-# fast build rule for target.
-_api_msgs_generate_messages_check_deps_MapList/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapList.dir/build
-.PHONY : _api_msgs_generate_messages_check_deps_MapList/fast
-
-# Convenience name for target.
-api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/rule
-.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/rule
-
-# Convenience name for target.
-_api_msgs_generate_messages_check_deps_MapToPng: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/rule
-.PHONY : _api_msgs_generate_messages_check_deps_MapToPng
-
-# fast build rule for target.
-_api_msgs_generate_messages_check_deps_MapToPng/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_MapToPng.dir/build
-.PHONY : _api_msgs_generate_messages_check_deps_MapToPng/fast
-
-# Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_NavToGoal.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_NavToGoal.dir/rule
 .PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_NavToGoal.dir/rule
@@ -402,6 +416,20 @@ _api_msgs_generate_messages_check_deps_RenameMap/fast:
 .PHONY : _api_msgs_generate_messages_check_deps_RenameMap/fast
 
 # Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_SaveModifiedMap: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_SaveModifiedMap
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_SaveModifiedMap/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SaveModifiedMap.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_SaveModifiedMap/fast
+
+# Convenience name for target.
 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/rule
 .PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/rule
@@ -414,6 +442,20 @@ _api_msgs_generate_messages_check_deps_SetGoal: api/api_msgs/CMakeFiles/_api_msg
 _api_msgs_generate_messages_check_deps_SetGoal/fast:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_SetGoal.dir/build
 .PHONY : _api_msgs_generate_messages_check_deps_SetGoal/fast
+
+# Convenience name for target.
+api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/rule:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/rule
+.PHONY : api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/rule
+
+# Convenience name for target.
+_api_msgs_generate_messages_check_deps_UploadMap: api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/rule
+.PHONY : _api_msgs_generate_messages_check_deps_UploadMap
+
+# fast build rule for target.
+_api_msgs_generate_messages_check_deps_UploadMap/fast:
+	cd /home/whj/catkin_ws/build && $(MAKE) -f api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/build.make api/api_msgs/CMakeFiles/_api_msgs_generate_messages_check_deps_UploadMap.dir/build
+.PHONY : _api_msgs_generate_messages_check_deps_UploadMap/fast
 
 # Convenience name for target.
 api/api_msgs/CMakeFiles/api_msgs_gencpp.dir/rule:
@@ -522,8 +564,11 @@ help:
 	@echo "... _api_msgs_generate_messages_check_deps_AddGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_CustomInitialize"
 	@echo "... _api_msgs_generate_messages_check_deps_CustomMoveCmd"
+	@echo "... _api_msgs_generate_messages_check_deps_DelFile"
 	@echo "... _api_msgs_generate_messages_check_deps_DelGoal"
-	@echo "... _api_msgs_generate_messages_check_deps_DelMap"
+	@echo "... _api_msgs_generate_messages_check_deps_DownloadFile"
+	@echo "... _api_msgs_generate_messages_check_deps_DownloadMap"
+	@echo "... _api_msgs_generate_messages_check_deps_GetList"
 	@echo "... _api_msgs_generate_messages_check_deps_GoalList"
 	@echo "... _api_msgs_generate_messages_check_deps_GridLaser"
 	@echo "... _api_msgs_generate_messages_check_deps_GridPoint"
@@ -531,13 +576,13 @@ help:
 	@echo "... _api_msgs_generate_messages_check_deps_GridSonar"
 	@echo "... _api_msgs_generate_messages_check_deps_LaunchCmd"
 	@echo "... _api_msgs_generate_messages_check_deps_MapData"
-	@echo "... _api_msgs_generate_messages_check_deps_MapList"
-	@echo "... _api_msgs_generate_messages_check_deps_MapToPng"
 	@echo "... _api_msgs_generate_messages_check_deps_NavToGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_PredefinedInitialize"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameGoal"
 	@echo "... _api_msgs_generate_messages_check_deps_RenameMap"
+	@echo "... _api_msgs_generate_messages_check_deps_SaveModifiedMap"
 	@echo "... _api_msgs_generate_messages_check_deps_SetGoal"
+	@echo "... _api_msgs_generate_messages_check_deps_UploadMap"
 	@echo "... api_msgs_gencpp"
 	@echo "... api_msgs_generate_messages"
 	@echo "... api_msgs_generate_messages_cpp"

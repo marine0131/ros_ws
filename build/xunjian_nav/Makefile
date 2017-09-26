@@ -192,48 +192,6 @@ _xunjian_nav_generate_messages_check_deps_Ultrasound/fast:
 .PHONY : _xunjian_nav_generate_messages_check_deps_Ultrasound/fast
 
 # Convenience name for target.
-xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make xunjian_nav/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make xunjian_nav/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make xunjian_nav/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 xunjian_nav/CMakeFiles/odometry_pub.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/odometry_pub.dir/rule
 .PHONY : xunjian_nav/CMakeFiles/odometry_pub.dir/rule
@@ -274,90 +232,6 @@ rotate: xunjian_nav/CMakeFiles/rotate.dir/rule
 rotate/fast:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/rotate.dir/build.make xunjian_nav/CMakeFiles/rotate.dir/build
 .PHONY : rotate/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make xunjian_nav/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/build.make xunjian_nav/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/build.make xunjian_nav/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/build.make xunjian_nav/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 xunjian_nav/CMakeFiles/xunjian_nav_gencpp.dir/rule:
@@ -543,20 +417,11 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_py"
 	@echo "... odometry_pub"
 	@echo "... pose_publisher"
 	@echo "... rebuild_cache"
 	@echo "... rotate"
 	@echo "... test"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... tf_generate_messages_py"
 	@echo "... xunjian_nav_gencpp"
 	@echo "... xunjian_nav_generate_messages"
 	@echo "... xunjian_nav_generate_messages_cpp"

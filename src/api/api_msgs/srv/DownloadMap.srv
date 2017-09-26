@@ -1,0 +1,5 @@
+string name
+---
+string mapFile
+string yamlFile
+string msg

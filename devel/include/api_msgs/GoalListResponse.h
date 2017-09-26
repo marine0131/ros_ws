@@ -24,17 +24,27 @@ struct GoalListResponse_
   typedef GoalListResponse_<ContainerAllocator> Type;
 
   GoalListResponse_()
-    : goalList()  {
+    : list()
+    , tags()
+    , msg()  {
     }
   GoalListResponse_(const ContainerAllocator& _alloc)
-    : goalList(_alloc)  {
+    : list(_alloc)
+    , tags(_alloc)
+    , msg(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _goalList_type;
-  _goalList_type goalList;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _list_type;
+  _list_type list;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _tags_type;
+  _tags_type tags;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msg_type;
+  _msg_type msg;
 
 
 
@@ -113,12 +123,12 @@ struct MD5Sum< ::api_msgs::GoalListResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bc37a6c620124f14e8cc5f76efaf8a76";
+    return "e0e77bd42eba6b6333028ed8dd1ac917";
   }
 
   static const char* value(const ::api_msgs::GoalListResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xbc37a6c620124f14ULL;
-  static const uint64_t static_value2 = 0xe8cc5f76efaf8a76ULL;
+  static const uint64_t static_value1 = 0xe0e77bd42eba6b63ULL;
+  static const uint64_t static_value2 = 0x33028ed8dd1ac917ULL;
 };
 
 template<class ContainerAllocator>
@@ -137,7 +147,9 @@ struct Definition< ::api_msgs::GoalListResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string goalList\n\
+    return "string list\n\
+string tags\n\
+string msg\n\
 \n\
 ";
   }
@@ -157,7 +169,9 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.goalList);
+      stream.next(m.list);
+      stream.next(m.tags);
+      stream.next(m.msg);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -176,8 +190,12 @@ struct Printer< ::api_msgs::GoalListResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::api_msgs::GoalListResponse_<ContainerAllocator>& v)
   {
-    s << indent << "goalList: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.goalList);
+    s << indent << "list: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.list);
+    s << indent << "tags: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.tags);
+    s << indent << "msg: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msg);
   }
 };
 

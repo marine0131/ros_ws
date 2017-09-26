@@ -116,6 +116,7 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  INCLUDE("/home/whj/catkin_ws/build/cartographer_ros/cartographer_ros_msgs/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rbx1/rbx1/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rosbridge_suite/rosbridge_suite/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/urdf_tutorial/urdf_sim_tutorial/cmake_install.cmake")
@@ -133,12 +134,13 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/whj/catkin_ws/build/nav_goal/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rosbridge_suite/rosbridge_server/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/sick_tim/cmake_install.cmake")
+  INCLUDE("/home/whj/catkin_ws/build/cartographer_ros/cartographer_ros/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rbx1/rbx1_apps/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rbx1/rbx1_nav/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/rbx1/rbx1_description/cmake_install.cmake")
+  INCLUDE("/home/whj/catkin_ws/build/cartographer_ros/cartographer_rviz/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/urdf_tutorial/urdf_tutorial/cmake_install.cmake")
   INCLUDE("/home/whj/catkin_ws/build/xunjian_nav/cmake_install.cmake")
-  INCLUDE("/home/whj/catkin_ws/build/cartographer_turtlebot/cartographer_turtlebot/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

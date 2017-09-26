@@ -25,7 +25,7 @@ class RobotPoseSrv():
         rospy.Service('api/predefined_initialize', PredefinedInitialize, self.handle_predefinedinitialize)
 
         self.custom_goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=10)
-        self.initial_pose_pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped, queue_size = 1)
+        self.initial_pose_pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped, queue_size=1)
         self.tf_listener = TransformListener()
 
         # rate=rospy.Rate(5)
@@ -75,6 +75,8 @@ class RobotPoseSrv():
         rospy.loginfo('recieve a custom goal: x %d, y %d', req.grid_x, req.grid_y)
         g = MoveBaseGoal()
         res = SetGoalResponse()
+        g.target_pose.header.frame_id = self.map_frame
+        g.target_pose.header.stamp = rospy.Time.now()
         g.target_pose.pose.position.x = (req.grid_x * self.mapinfo.info.resolution
                                          + self.mapinfo.info.origin.position.x)
         g.target_pose.pose.position.y = (req.grid_y * self.mapinfo.info.resolution
@@ -142,7 +144,7 @@ class RobotPoseSrv():
             pose.pose.pose.position.x = goal_dict[req.goalName]['position']['x']
             pose.pose.pose.position.y = goal_dict[req.goalName]['position']['y']
             pose.pose.pose.position.z = goal_dict[req.goalName]['position']['z']
-            res.msg = 'succuss'
+            res.msg = 'success'
         else:
             res.msg = 'goal not exist'
             return res

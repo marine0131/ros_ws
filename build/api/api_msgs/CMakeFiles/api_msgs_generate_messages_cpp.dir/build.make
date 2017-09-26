@@ -49,19 +49,22 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridPoint.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelGoal.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/RenameGoal.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelFile.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapData.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelMap.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridLaser.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapList.h
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GoalList.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GetList.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridSonar.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GoalList.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridPose.h
 
@@ -95,11 +98,19 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/RenameGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/whj/catkin_ws/devel/include/api_msgs/DelFile.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/DelFile.h: /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv
+/home/whj/catkin_ws/devel/include/api_msgs/DelFile.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/DelFile.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/DelFile.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
 /home/whj/catkin_ws/devel/include/api_msgs/MapData.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/MapData.h: /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv
 /home/whj/catkin_ws/devel/include/api_msgs/MapData.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/MapData.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/MapData.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -108,7 +119,7 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
 /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/CustomInitialize.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -116,39 +127,47 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h: /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv
 /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/AddGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
+/home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h: /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv
+/home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/SaveModifiedMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h: /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv
 /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/LaunchCmd.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/whj/catkin_ws/devel/include/api_msgs/DelMap.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/whj/catkin_ws/devel/include/api_msgs/DelMap.h: /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv
-/home/whj/catkin_ws/devel/include/api_msgs/DelMap.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-/home/whj/catkin_ws/devel/include/api_msgs/DelMap.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/DelMap.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h: /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv
 /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/PredefinedInitialize.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
+/home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h: /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv
+/home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/UploadMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h: /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv
 /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/RenameMap.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -157,7 +176,7 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 /home/whj/catkin_ws/devel/include/api_msgs/GridLaser.h: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
 /home/whj/catkin_ws/devel/include/api_msgs/GridLaser.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/GridLaser.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GridLaser.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -165,33 +184,17 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h: /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv
 /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/SetGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
-/home/whj/catkin_ws/devel/include/api_msgs/MapList.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/whj/catkin_ws/devel/include/api_msgs/MapList.h: /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv
-/home/whj/catkin_ws/devel/include/api_msgs/MapList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-/home/whj/catkin_ws/devel/include/api_msgs/MapList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/MapList.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h: /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv
-/home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-/home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/MapToPng.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
-/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/GetList.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/GetList.h: /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv
+/home/whj/catkin_ws/devel/include/api_msgs/GetList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/GetList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GoalList.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GetList.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/whj/catkin_ws/devel/include/api_msgs/GridSonar.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/GridSonar.h: /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv
@@ -201,11 +204,35 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GridSonar.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
+/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/GoalList.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GoalList.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/DownloadMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/DownloadFile.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
+
 /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h: /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv
 /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/NavToGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -214,7 +241,7 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp: /home/whj/catkin_ws/deve
 /home/whj/catkin_ws/devel/include/api_msgs/GridPose.h: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
 /home/whj/catkin_ws/devel/include/api_msgs/GridPose.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/whj/catkin_ws/devel/include/api_msgs/GridPose.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from api_msgs/GridPose.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/include/api_msgs -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -223,19 +250,22 @@ api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/Custo
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridPoint.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelGoal.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/RenameGoal.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelFile.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapData.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/CustomInitialize.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/AddGoal.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/SaveModifiedMap.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/LaunchCmd.h
-api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DelMap.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/PredefinedInitialize.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/UploadMap.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/RenameMap.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridLaser.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/SetGoal.h
-api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapList.h
-api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/MapToPng.h
-api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GoalList.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GetList.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridSonar.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GoalList.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DownloadMap.h
+api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/DownloadFile.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/NavToGoal.h
 api_msgs_generate_messages_cpp: /home/whj/catkin_ws/devel/include/api_msgs/GridPose.h
 api_msgs_generate_messages_cpp: api/api_msgs/CMakeFiles/api_msgs_generate_messages_cpp.dir/build.make

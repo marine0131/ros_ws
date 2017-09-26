@@ -41,9 +41,11 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/api_msgs/srv" TYPE FILE FILES
-    "/home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv"
-    "/home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/DelGoal.srv"
@@ -52,12 +54,13 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv"
-    "/home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/RenameGoal.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv"
     "/home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv"
+    "/home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

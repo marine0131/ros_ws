@@ -3,6 +3,6 @@
           MAPNAME
           GOALNAME-VAL
           GOALNAME
-          RES-VAL
-          RES
+          MSG-VAL
+          MSG
 ))

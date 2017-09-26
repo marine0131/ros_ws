@@ -1,0 +1,4 @@
+string name
+string base64Data
+---
+string msg

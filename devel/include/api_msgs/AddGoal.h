@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::api_msgs::AddGoal > {
   static const char* value()
   {
-    return "802c28d41326fad853e80597ef4c8c7f";
+    return "7ed70b59a7bfaaa4a886dd445668c789";
   }
 
   static const char* value(const ::api_msgs::AddGoal&) { return value(); }

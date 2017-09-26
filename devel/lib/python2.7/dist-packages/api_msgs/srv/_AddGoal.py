@@ -172,13 +172,13 @@ import struct
 
 
 class AddGoalResponse(genpy.Message):
-  _md5sum = "53af918a2a4a2a182c184142fff49b0c"
+  _md5sum = "7d96ed730776804754140b85e64c862e"
   _type = "api_msgs/AddGoalResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string res
+  _full_text = """string msg
 
 """
-  __slots__ = ['res']
+  __slots__ = ['msg']
   _slot_types = ['string']
 
   def __init__(self, *args, **kwds):
@@ -189,7 +189,7 @@ class AddGoalResponse(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       res
+       msg
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -198,10 +198,10 @@ class AddGoalResponse(genpy.Message):
     if args or kwds:
       super(AddGoalResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.res is None:
-        self.res = ''
+      if self.msg is None:
+        self.msg = ''
     else:
-      self.res = ''
+      self.msg = ''
 
   def _get_types(self):
     """
@@ -215,7 +215,7 @@ class AddGoalResponse(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.res
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -240,9 +240,9 @@ class AddGoalResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.res = str[start:end].decode('utf-8')
+        self.msg = str[start:end].decode('utf-8')
       else:
-        self.res = str[start:end]
+        self.msg = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -255,7 +255,7 @@ class AddGoalResponse(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.res
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -281,9 +281,9 @@ class AddGoalResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.res = str[start:end].decode('utf-8')
+        self.msg = str[start:end].decode('utf-8')
       else:
-        self.res = str[start:end]
+        self.msg = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -291,6 +291,6 @@ class AddGoalResponse(genpy.Message):
 _struct_I = genpy.struct_I
 class AddGoal(object):
   _type          = 'api_msgs/AddGoal'
-  _md5sum = '802c28d41326fad853e80597ef4c8c7f'
+  _md5sum = '7ed70b59a7bfaaa4a886dd445668c789'
   _request_class  = AddGoalRequest
   _response_class = AddGoalResponse

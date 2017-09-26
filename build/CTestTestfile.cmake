@@ -4,6 +4,7 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
+SUBDIRS(cartographer_ros/cartographer_ros_msgs)
 SUBDIRS(rbx1/rbx1)
 SUBDIRS(rosbridge_suite/rosbridge_suite)
 SUBDIRS(urdf_tutorial/urdf_sim_tutorial)
@@ -21,9 +22,10 @@ SUBDIRS(my_action_lib)
 SUBDIRS(nav_goal)
 SUBDIRS(rosbridge_suite/rosbridge_server)
 SUBDIRS(sick_tim)
+SUBDIRS(cartographer_ros/cartographer_ros)
 SUBDIRS(rbx1/rbx1_apps)
 SUBDIRS(rbx1/rbx1_nav)
 SUBDIRS(rbx1/rbx1_description)
+SUBDIRS(cartographer_ros/cartographer_rviz)
 SUBDIRS(urdf_tutorial/urdf_tutorial)
 SUBDIRS(xunjian_nav)
-SUBDIRS(cartographer_turtlebot/cartographer_turtlebot)

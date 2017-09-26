@@ -1,0 +1,7 @@
+string name
+string map_data
+string yaml_data
+---
+string map_size
+string yaml_size
+string msg

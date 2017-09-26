@@ -1,0 +1,16 @@
+digraph G {
+"base_link" -> "ut2"[label="Broadcaster: /ultra2_broadcaster\nAverage rate: 48.503 Hz\nMost recent transform: 1505894292.992 ( -0.005 sec old)\nBuffer length: 4.948 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /cartographer_node\nAverage rate: 190.572 Hz\nMost recent transform: 1505894292.980 ( 0.007 sec old)\nBuffer length: 5.001 sec\n"];
+"base_link" -> "ut1"[label="Broadcaster: /ultra1_broadcaster\nAverage rate: 48.427 Hz\nMost recent transform: 1505894293.000 ( -0.013 sec old)\nBuffer length: 4.956 sec\n"];
+"base_link" -> "laser"[label="Broadcaster: /laser_broadcaster\nAverage rate: 48.619 Hz\nMost recent transform: 1505894292.987 ( 0.000 sec old)\nBuffer length: 4.936 sec\n"];
+"map" -> "odom"[label="Broadcaster: /cartographer_node\nAverage rate: 190.572 Hz\nMost recent transform: 1505894292.980 ( 0.007 sec old)\nBuffer length: 5.001 sec\n"];
+"base_link" -> "ut4"[label="Broadcaster: /ultra4_broadcaster\nAverage rate: 48.275 Hz\nMost recent transform: 1505894292.987 ( 0.000 sec old)\nBuffer length: 4.930 sec\n"];
+"base_link" -> "imu"[label="Broadcaster: /imu_broadcaster\nAverage rate: 48.501 Hz\nMost recent transform: 1505894292.987 ( 0.000 sec old)\nBuffer length: 4.928 sec\n"];
+"base_link" -> "ut3"[label="Broadcaster: /ultra3_broadcaster\nAverage rate: 48.543 Hz\nMost recent transform: 1505894292.988 ( -0.001 sec old)\nBuffer length: 4.923 sec\n"];
+"base_link" -> "ut5"[label="Broadcaster: /ultra5_broadcaster\nAverage rate: 48.180 Hz\nMost recent transform: 1505894293.004 ( -0.017 sec old)\nBuffer length: 4.940 sec\n"];
+"base_link" -> "ut6"[label="Broadcaster: /ultra6_broadcaster\nAverage rate: 48.513 Hz\nMost recent transform: 1505894292.993 ( -0.006 sec old)\nBuffer length: 4.926 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1505894292.987"[ shape=plaintext ] ;
+ }->"map";
+}

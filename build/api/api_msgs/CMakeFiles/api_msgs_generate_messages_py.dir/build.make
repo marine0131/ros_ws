@@ -49,19 +49,22 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_GridPoint.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelGoal.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameGoal.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py
@@ -91,79 +94,79 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/RenameGoal"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py: /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/DelFile"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py: /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/MapData"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py: /home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/CustomInitialize"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py: /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/AddGoal"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py: /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/SaveModifiedMap"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py: /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/LaunchCmd"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py: /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/DelMap"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
-
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py: /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/PredefinedInitialize"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py: /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/UploadMap"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py: /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/RenameMap"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GridLaser"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py: /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/SetGoal"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py: /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/MapList"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
-
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py: /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/MapToPng"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
-
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GoalList"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GetList"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv
@@ -171,16 +174,34 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GridSonar"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GoalList"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/DownloadMap"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/DownloadFile"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
+
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py: /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/NavToGoal"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py: /home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV api_msgs/GridPose"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv
 
@@ -189,22 +210,25 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_GridPoint.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelGoal.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameGoal.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for api_msgs"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg --initpy
 
@@ -213,22 +237,25 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_py: /home/whj/catkin_ws/devel
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_GridPoint.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelGoal.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameGoal.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py
-/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py
+/home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py
 /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/__init__.py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for api_msgs"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv --initpy
 
@@ -237,19 +264,22 @@ api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-pack
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/_GridPoint.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelGoal.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameGoal.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelFile.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapData.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_CustomInitialize.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_AddGoal.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SaveModifiedMap.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_LaunchCmd.py
-api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DelMap.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_PredefinedInitialize.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_UploadMap.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_RenameMap.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridLaser.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_SetGoal.py
-api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapList.py
-api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_MapToPng.py
-api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GetList.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridSonar.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GoalList.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadMap.py
+api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_DownloadFile.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_NavToGoal.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/srv/_GridPose.py
 api_msgs_generate_messages_py: /home/whj/catkin_ws/devel/lib/python2.7/dist-packages/api_msgs/msg/__init__.py

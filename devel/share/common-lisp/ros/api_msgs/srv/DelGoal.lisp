@@ -79,10 +79,10 @@
   "api_msgs/DelGoalRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DelGoal-request>)))
   "Returns md5sum for a message object of type '<DelGoal-request>"
-  "802c28d41326fad853e80597ef4c8c7f")
+  "7ed70b59a7bfaaa4a886dd445668c789")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DelGoal-request)))
   "Returns md5sum for a message object of type 'DelGoal-request"
-  "802c28d41326fad853e80597ef4c8c7f")
+  "7ed70b59a7bfaaa4a886dd445668c789")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DelGoal-request>)))
   "Returns full string definition for message of type '<DelGoal-request>"
   (cl:format cl:nil "string mapName~%string goalName~%~%~%"))
@@ -103,9 +103,9 @@
 ;//! \htmlinclude DelGoal-response.msg.html
 
 (cl:defclass <DelGoal-response> (roslisp-msg-protocol:ros-message)
-  ((res
-    :reader res
-    :initarg :res
+  ((msg
+    :reader msg
+    :initarg :msg
     :type cl:string
     :initform ""))
 )
@@ -118,18 +118,18 @@
   (cl:unless (cl:typep m 'DelGoal-response)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name api_msgs-srv:<DelGoal-response> is deprecated: use api_msgs-srv:DelGoal-response instead.")))
 
-(cl:ensure-generic-function 'res-val :lambda-list '(m))
-(cl:defmethod res-val ((m <DelGoal-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader api_msgs-srv:res-val is deprecated.  Use api_msgs-srv:res instead.")
-  (res m))
+(cl:ensure-generic-function 'msg-val :lambda-list '(m))
+(cl:defmethod msg-val ((m <DelGoal-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader api_msgs-srv:msg-val is deprecated.  Use api_msgs-srv:msg instead.")
+  (msg m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <DelGoal-response>) ostream)
   "Serializes a message object of type '<DelGoal-response>"
-  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'res))))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'msg))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'res))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'msg))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <DelGoal-response>) istream)
   "Deserializes a message object of type '<DelGoal-response>"
@@ -138,9 +138,9 @@
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'res) (cl:make-string __ros_str_len))
+      (cl:setf (cl:slot-value msg 'msg) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
-        (cl:setf (cl:char (cl:slot-value msg 'res) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+        (cl:setf (cl:char (cl:slot-value msg 'msg) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<DelGoal-response>)))
@@ -151,24 +151,24 @@
   "api_msgs/DelGoalResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DelGoal-response>)))
   "Returns md5sum for a message object of type '<DelGoal-response>"
-  "802c28d41326fad853e80597ef4c8c7f")
+  "7ed70b59a7bfaaa4a886dd445668c789")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DelGoal-response)))
   "Returns md5sum for a message object of type 'DelGoal-response"
-  "802c28d41326fad853e80597ef4c8c7f")
+  "7ed70b59a7bfaaa4a886dd445668c789")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DelGoal-response>)))
   "Returns full string definition for message of type '<DelGoal-response>"
-  (cl:format cl:nil "string res~%~%~%~%"))
+  (cl:format cl:nil "string msg~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DelGoal-response)))
   "Returns full string definition for message of type 'DelGoal-response"
-  (cl:format cl:nil "string res~%~%~%~%"))
+  (cl:format cl:nil "string msg~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DelGoal-response>))
   (cl:+ 0
-     4 (cl:length (cl:slot-value msg 'res))
+     4 (cl:length (cl:slot-value msg 'msg))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <DelGoal-response>))
   "Converts a ROS message object to a list"
   (cl:list 'DelGoal-response
-    (cl:cons ':res (res msg))
+    (cl:cons ':msg (msg msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'DelGoal)))
   'DelGoal-request)

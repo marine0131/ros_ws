@@ -29,31 +29,43 @@
 	</node>
 
     <!--static map server-->
-	<node name="static_map_server" pkg="api" type="static_map_server.py" output="screen" >
+	<node name="static_map_server" pkg="api" type="static_map_server.py" output="screen">
 		<param name="api_pkg_path" value="$(arg api_pkg_path)" />
 	</node> 
 	
     <!--goal server-->
-    <node name="goal_server" pkg="api" type="goal_server.py" output="screen" >
+    <node name="goal_server" pkg="api" type="goal_server.py" output="screen">
     	<param name="api_pkg_path" value="$(arg api_pkg_path)" />
     </node>
     
     <!--pose server-->
-    <node name="pose_server" pkg="api" type="pose_server.py" output="screen" >
+    <node name="pose_server" pkg="api" type="pose_server.py" output="screen">
     	<param name="robot_frame" value="$(arg robot_frame)"/>
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
     
     <!--laser server-->
-    <node name="grid_laser_server" pkg="api" type="grid_laser_server.py" >
+    <node name="grid_laser_server" pkg="api" type="grid_laser_server.py" output="screen">
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
     
     <!--sonar server-->
-    <node name="grid_sonar_server" pkg="api" type="grid_sonar_server.py" >
+    <node name="grid_sonar_server" pkg="api" type="grid_sonar_server.py" output="screen">
     	<param name="sonar_frame" value="$(arg sonar_frame)" />
     	<param name="map_frame" value="$(arg map_frame)" />
     </node>
+	
+	<!--file server-->
+    <node name="file_server" pkg="api" type="file_server.py" output="screen">
+    	<param name="api_pkg_path" value="$(arg api_pkg_path)" />
+    </node>
+	
+	<!--*******************************nav_goal********************************-->
+	<node pkg="nav_goal" type="nav_goal.py" name="nav_goal" output="screen" />
+	<node pkg="nav_goal" type="custom_move.py" name="custom_move" output="screen">
+		<param name="vel_topic" type="string" value="nav_cmdvel" />
+	</node>
+	
 	
     <!--===========================================================================================-->
     <node pkg="xunjian_nav" type="odometry_pub" name="odometry_pub"  />
@@ -74,14 +86,7 @@
   	</node>
   	
 	<!--*************rotate for initialize ************-->
-	<node pkg="xunjian_nav" name="rotate" type="rotate" output="screen"/>
 	
-	<!--*************pose publisher***************-->
-    <node pkg="xunjian_nav" name="pose_publisher" type="pose_publisher">
-		<param name="map_frame" type="string" value="map" />
-		<param name="base_frame" type="string" value="base_link" />
-		<param name="publish_frequency" type="int" value="20" />
-	</node>
 	
 	<!--<node pkg="rviz" name="rviz" type="rviz" required="true"
     	args="-d $(find xunjian_nav)/rviz/nav_test.rviz"/>-->

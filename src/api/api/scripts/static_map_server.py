@@ -5,18 +5,18 @@ from PIL import Image
 import base64
 import os
 import re
-from api_msgs.srv import DelMap, DelMapResponse, RenameMap, RenameMapResponse
-from api_msgs.srv import MapData, MapDataResponse, MapList, MapListResponse, MapToPng, MapToPngResponse
+from api_msgs.srv import DelFile, DelFileResponse, RenameMap, RenameMapResponse, SaveModifiedMap, SaveModifiedMapResponse
+from api_msgs.srv import MapData, MapDataResponse, GetList, GetListResponse, MapToPng, MapToPngResponse
 
 
 class StaticMapSrv():
     def __init__(self, pkg_path):
         self.pkg_path = pkg_path
         rospy.Service('api/get_static_map', MapData, self.handle_staticmap)
-        rospy.Service('api/map_list', MapList, self.handle_maplist)
-        rospy.Service('api/map_to_png', MapToPng, self.handle_maptopng)
-        rospy.Service('api/del_map', DelMap, self.handle_delmap)
+        rospy.Service('api/map_list', GetList, self.handle_maplist)
+        rospy.Service('api/del_map', DelFile, self.handle_delmap)
         rospy.Service('api/rename_map', RenameMap, self.handle_renamemap)
+        rospy.Service('api/save_modified_map', SaveModifiedMap, self.handle_savemodifiedmap)
 
     def handle_staticmap(self, req):
         full_name = os.path.join(self.pkg_path, 'maps/' + req.name + '.png')
@@ -28,31 +28,27 @@ class StaticMapSrv():
         return base_data
 
     def handle_maplist(self, req):
+        res  = GetListResponse()
         f_list = os.listdir(os.path.join(self.pkg_path, 'maps/'))
         map_list = []
         for f in f_list:
             if os.path.splitext(f)[1] == '.yaml':
                 map_list.append(os.path.splitext(f)[0])
-        map_string = MapListResponse()
 
-        map_string.mapName = ';'.join(map_list)
-        return map_string
+        res.list = ';'.join(map_list)
+        res.msg = 'success'
+        return res
 
     def handle_delmap(self, req):
-        res = DelMapResponse()
-        rospy.loginfo('request to delte map "%s"', req.mapName)
-        if not os.path.isfile(os.path.join(self.pkg_path, 'maps/' + req.mapName
-                                           + '.yaml')):
-            res.msg = 'map not exist'
-            return res
-        os.remove(os.path.join(self.pkg_path, 'maps/' + req.mapName + '.yaml'))
-        os.remove(os.path.join(self.pkg_path, 'maps/' + req.mapName + '.png'))
-
-        try:  # delete goal list file
-            os.remove(os.path.join(self.pkg_path, 'goals/' + req.mapName + '.json'))
-        except Exception:
-            pass
-        res.msg = 'success'
+        res = DelFileResponse()
+        rospy.loginfo('request to delte map "%s"', req.name)
+        try:
+            os.remove(os.path.join(self.pkg_path, 'maps/' + req.name + '.yaml'))
+            os.remove(os.path.join(self.pkg_path, 'maps/' + req.name + '.png'))
+            os.remove(os.path.join(self.pkg_path, 'goals/' + req.name + '.json'))
+            res.msg = 'success'
+        except Exception as e:
+            res.msg = str(e)
         return res
 
     def handle_renamemap(self, req):
@@ -74,41 +70,32 @@ class StaticMapSrv():
         try:
             os.rename(yaml, new_yaml)
             os.rename(png, new_png)
-        except Exception:
-            res.msg = 'os error'
+        except Exception as e:
+            res.msg = str(e)
             return res
 
         self.modify_yaml(new_yaml, req.oldMapName, req.newMapName)
         res.msg = 'success'
         return res
 
-    def handle_maptopng(self, req):
-        response = MapToPngResponse()
-        response.result = self.pgm2png(os.path.join(self.pkg_path, 'maps/' + req.oldName + '.pgm'),
-                                       os.path.join(self.pkg_path, 'maps/'))
-        if response.result == 'Success':
-            self.modify_yaml(os.path.join(self.pkg_path, 'maps/' + req.oldName
-                                          + '.yaml'), 'pgm', 'png')
-        return response
+    def handle_savemodifiedmap(self, req):
+        res = SaveModifiedMapResponse()
+        map_file = os.path.join(self.pkg_path, 'maps/' + req.name + '.png')
 
-    def pgm2png(self, pgm_file, png_dir):
+        if not os.path.exists(map_file):
+            res.msg = 'map not exists'
+            return res
+
+        img_data = base64.b64decode(req.base64Data)
         try:
-            pgm = Image.open(pgm_file)
-        except IOError:
-            rospy.loginfo('file: %s not exit', pgm_file)
-            return 'error: file not exit'
-        name = (str)(os.path.join(png_dir, os.path.splitext(
-            os.path.basename(pgm_file))[0])) + ".png"
-        pgm.save(name)
-        os.remove(pgm_file)
-        return 'Success'
+            with open(map_file, 'wb') as f:
+                f.write(img_data)
+            res.msg = 'success'
+        except Exception as e:
+            res.msg = str(e)
 
-    def modify_yaml(self, yaml_file, pattern, repl):
-        with open(yaml_file, 'r') as f:
-            lines = f.readlines()
-        lines[0] = re.sub(pattern, repl, lines[0])
-        with open(yaml_file, 'w+') as f:
-            f.writelines(lines)
+        return res
+
 
 
 if __name__ == "__main__":

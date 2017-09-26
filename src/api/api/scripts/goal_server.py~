@@ -3,29 +3,36 @@
 import rospy
 import json
 import os
+import math.atan2
 from geometry_msgs.msg import PoseStamped
+from tf import transformations
 from move_base_msgs.msg import MoveBaseGoal
 from nav_msgs.msg import OccupancyGrid
 from api_msgs.srv import NavToGoal, NavToGoalResponse, AddGoal, AddGoalResponse, DelGoal, DelGoalResponse, RenameGoal, RenameGoalResponse, GoalList, GoalListResponse
+from api_msgs.srv import CustomInitialize, CustomInitializeResponse
 
 
 class GoalListSrv():
     def __init__(self, path):
-        # GOAL_LIST_DIR = rospy.get_param('~goal_list_dir')
-        # self.path = MAP_DIR
-        self.path = path
+        self.goal_path = path
         self.mapinfo = OccupancyGrid()
         self.pose_msg = PoseStamped()
+        self.SPECIAL_GOAL = ['__CHARGE', '__INIT']  # special goal key
+
         rospy.Service('api/add_goal', AddGoal, self.handle_addgoal)
+        rospy.Service('api/add_custom_goal', CustomInitialize, self.handle_addcustomgoal)
         rospy.Service('api/del_goal', DelGoal, self.handle_delgoal)
         rospy.Service('api/goal_list', GoalList, self.handle_goallist)
+        rospy.Service('api/init_goal_list', GoalList, self.handle_initgoallist)
         rospy.Service('api/rename_goal', RenameGoal, self.handle_renamegoal)
         rospy.Service('api/nav_to_goal', NavToGoal, self.handle_navgoal)
+        rospy.Service('api/set_charge_point', AddGoal, self.handle_setcharge)
+        rospy.Service('api/set_init_point', AddGoal, self.handle_setinit)
 
         rospy.Subscriber("map", OccupancyGrid, self.map_callback)
         rospy.Subscriber('pose', PoseStamped, self.pose_callback)
 
-        self.goal_pub = rospy.Publisher('nav_goal/goal', MoveBaseGoal, queue_size=1)
+        self.goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=1)
         # for test
         # rospy.Subscriber('map_metadata', MapMetaData, self.pose_callback)
 
@@ -36,10 +43,11 @@ class GoalListSrv():
         self.mapinfo.info = msg.info
 
     def handle_navgoal(self, req):
+        rospy.loginfo('nav to goal %s in map %s', req.goalName, req.mapName)
         goal_msg = MoveBaseGoal()
         res = NavToGoalResponse()
 
-        file_name = self.path + req.mapName + '.json'
+        file_name = self.goal_path + req.mapName + '.json'
         try:
             with open(file_name, 'r') as f:
                 goal_dict = json.load(f)
@@ -69,7 +77,7 @@ class GoalListSrv():
         rospy.loginfo('rename goal "%s" to "%s" in map "%s"', req.mapName,
                       req.oldGoalName, req.newGoalName)
         res = RenameGoalResponse()
-        json_file = os.path.join(self.path, req.mapName + '.json')
+        json_file = os.path.join(self.goal_path, req.mapName + '.json')
         goal_dict = {}
         try:
             with open(json_file, 'r') as f:
@@ -82,21 +90,158 @@ class GoalListSrv():
         except Exception:
             res.msg = 'old name not exist or new name exist'
             return res
-        try:
-            with open(json_file, 'w') as f:
-                json.dump(goal_dict, f)
-        except Exception:
-            rospy.loginfo('fail to dump into file')
+
+        # if rename a goal with special function, rename the special key too
+        for tag in self.SPECIAL_GOAL:
+            if goal_dict[tag] == req.oldGoalName:
+                goal_dict[tag] = req.newGoalName
+
+        with open(json_file, 'w') as f:
+            json.dump(goal_dict, f)
         res.msg = 'success'
         return res
 
     def handle_addgoal(self, req):
         rospy.loginfo('add a goal "%s" in map "%s"', req.goalName, req.mapName)
         res = AddGoalResponse()
-        file_name = self.path + req.mapName + '.json'
+        json_path = self.goal_path + req.mapName + '.json'
+        res.msg = self.save_to_json(json_path, req.goalName, self.get_posedict(self.pose_msg))
+        return res
+
+    def handle_addcustomgoal(self, req):
+        rospy.loginfo('add a goal "%s" in map "%s"', req.goalName, req.mapName)
+        res = CustomInitializeResponse()
+        json_path = self.goal_path + req.mapName + '.json'
+
+        # get custom pose
+        pose = PoseStamped()
+        pose.pose.position.x = req.pose.x * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.x
+        pose.pose.position.y = req.pose.y * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.y
+        head_x = req.head.x * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.x
+        head_y = req.head.y * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.y
+        yaw = math.atan2(head_y - pose.pose.position.y, head_x - pose.pose.position.x)
+        quat = transformations.quaternion_from_euler(0, 0, yaw)
+        pose.pose.orientation.x = quat[0]
+        pose.pose.orientation.y = quat[1]
+        pose.pose.orientation.z = quat[2]
+        pose.pose.orientation.w = quat[3]
+
+        res.msg = self.save_to_json(json_path, req.goalname, self.get_posedict(pose))
+        return res
+
+    def handle_delgoal(self, req):
+        rospy.loginfo('delete goal "%s" in map "%s"', req.goalName, req.mapName)
+        res = DelGoalResponse()
+        file_name = self.goal_path + req.mapName + '.json'
+
+        if not os.path.exists(file_name):
+            res.msg = 'goal list not exit'
+            return res
+
+        with open(file_name, 'r') as load_f:
+            goal_dict = json.load(load_f)
+
+        # unable to delete goal with special function
+        for tag in self.SPECIAL_GOAL:
+            if goal_dict[tag] == req.goalName:
+                res.msg = 'can not delete this goal'
+                return res
+
+        try:
+            goal_dict.pop(req.goalName)
+        except Exception as err:
+            res.msg = 'goal ' + str(err) + ' not exit'
+            return res
+
+        with open(file_name, 'w') as f:
+            json.dump(goal_dict, f)
+        res.msg = 'success'
+        return res
+
+    def handle_goallist(self, req):
+        res = GoalListResponse()
+        file_name = self.goal_path + req.mapName + '.json'
+
+        try:
+            with open(file_name, 'r') as f:
+                goal_dict = json.load(f)
+        except Exception as e:
+            res.msg = str(e)
+            return res
+
+        # get special tags
+        tags = {}
+        for tag in self.SPECIAL_GOAL:
+            tags[tag] = goal_dict.pop(tag)
+
+        # get goal list
+        goal_grid_dict = dict((name, goal_dict[name]['grid']) for name in goal_dict)
+
+        res.list = json.dumps(goal_grid_dict)
+        res.tags = json.dumps(tags)
+        res.msg = 'success'
+        return res
+
+    def handle_initgoallist(self, req):
+        res = GoalListResponse()
+        goal_path = os.path.join(self.goal_path, req.mapName + '.json')
+        if os.path.exists(goal_path):
+            os.remove(goal_path)
+        self.init_goallist(goal_path)
+        res.msg = 'success'
+        return res
+
+    def handle_setcharge(self, req):
+        res = AddGoalResponse()
+        file_path = self.goal_path + req.mapName + '.json'
+        res.msg = self.set_special_goal(file_path, self.SPECIAL_GOAL[0], req.goalName)
+        return res
+
+    def handle_setinit(self, req):
+        res = AddGoalResponse()
+        file_path = self.goal_path + req.mapName + '.json'
+        res.msg = self.set_special_goal(file_path, self.SPECIAL_GOAL[1], req.goalName)
+        return res
+
+    def set_special_goal(self, file_path, type_name, goal_name):
+        try:
+            with open(file_path, 'r') as f:
+                goal_dict = json.load(f)
+        except Exception as e:
+            msg = str(e)
+            return msg
+
+        if goal_dict.get(goal_name):  # goal name exist
+            goal_dict[type_name] = goal_name
+            with open(file_path, 'w') as f:
+                json.dump(goal_dict, f)
+        else:
+            msg = 'can not find goal name'
+            return msg
+
+        msg = 'success'
+        return msg
+
+    def init_goallist(self, goal_path):
+        # initial pose
+        pose = PoseStamped()
+        pose.pose.orientation.w = 1.0
+        init_pose = self.get_posedict(pose)
+        goal_dict = {}
+        goal_dict['__CHARGE'] = 'charge'
+        goal_dict['__INIT'] = 'init'
+        goal_dict['charge'] = init_pose
+        goal_dict['init'] = init_pose
+        # save to json
+        with open(goal_path, 'w') as f:
+            json.dump(goal_dict, f)
+
+    def get_posedict(self, pose_msg):
         pose_dict = {}
         quat_dict = {}
         grid_dict = {}
+
+        pose = {}
         # for test
         # pose_dict['x'] = msg.origin.position.x
         # pose_dict['y'] = msg.origin.position.y
@@ -105,80 +250,45 @@ class GoalListSrv():
         # quat_dict['y'] = msg.origin.orientation.y
         # quat_dict['z'] = msg.origin.orientation.z
         # quat_dict['w'] = msg.origin.orientation.w
-        pose_dict['x'] = self.pose_msg.pose.position.x
-        pose_dict['y'] = self.pose_msg.pose.position.y
-        pose_dict['z'] = self.pose_msg.pose.position.z
-        quat_dict['x'] = self.pose_msg.pose.orientation.x
-        quat_dict['y'] = self.pose_msg.pose.orientation.y
-        quat_dict['z'] = self.pose_msg.pose.orientation.z
-        quat_dict['w'] = self.pose_msg.pose.orientation.w
-        grid_dict['x'] = (int)((self.pose_msg.pose.position.x
+        pose_dict['x'] = pose_msg.pose.position.x
+        pose_dict['y'] = pose_msg.pose.position.y
+        pose_dict['z'] = pose_msg.pose.position.z
+        quat_dict['x'] = pose_msg.pose.orientation.x
+        quat_dict['y'] = pose_msg.pose.orientation.y
+        quat_dict['z'] = pose_msg.pose.orientation.z
+        quat_dict['w'] = pose_msg.pose.orientation.w
+        grid_dict['x'] = (int)((pose_msg.pose.position.x
                                - self.mapinfo.info.origin.position.x)
                                / self.mapinfo.info.resolution)
-        grid_dict['y'] = (int)((self.pose_msg.pose.position.y
+        grid_dict['y'] = (int)((pose_msg.pose.position.y
                                - self.mapinfo.info.origin.position.y)
                                / self.mapinfo.info.resolution)
         grid_dict['z'] = 0
 
-        curr_pose = {}
-        curr_pose['position'] = pose_dict
-        curr_pose['orientation'] = quat_dict
-        curr_pose['grid'] = grid_dict
+        pose['position'] = pose_dict
+        pose['orientation'] = quat_dict
+        pose['grid'] = grid_dict
 
+        return pose
+
+    def save_to_json(self, path, goal_name, pose):
         goal_dict = {}
-        if os.path.exists(file_name):
-            with open(file_name, 'r') as load_f:
-                goal_dict = json.load(load_f)
+        if not os.path.exists(path):
+            self.init_goallist(path)
 
-        if not goal_dict.get(req.goalName):
-            goal_dict[req.goalName] = curr_pose
-        else:
-            res.res = 'ducplicated goal name'
-            return res
-
-        with open(file_name, 'w') as f:
-            json.dump(goal_dict, f)
-        res.res = req.goalName
-        return res
-
-    def handle_delgoal(self, req):
-        rospy.loginfo('delete goal "%s" in map "%s"', req.goalName, req.mapName)
-        res = DelGoalResponse()
-        file_name = self.path + req.mapName + '.json'
-
-        if not os.path.exists(file_name):
-            res.res = 'goal list not exit'
-            return res
-
-        with open(file_name, 'r') as load_f:
+        with open(path, 'r') as load_f:
             goal_dict = json.load(load_f)
-        try:
-            goal_dict.pop(req.goalName)
-        except Exception as err:
-            res.res = 'goal ' + str(err) + ' not exit'
-            return res
 
-        with open(file_name, 'w') as f:
+        if not goal_dict.get(goal_name):
+            goal_dict[goal_name] = pose
+        else:
+            msg = 'ducplicated goal name'
+            return msg
+
+        with open(path, 'w') as f:
             json.dump(goal_dict, f)
-        res.res = req.goalName
-        return res
-
-    def handle_goallist(self, req):
-        res = GoalListResponse()
-        file_name = self.path + req.mapName + '.json'
-
-        if not os.path.exists(file_name):
-            res.goalList = 'goal list not exist'
-            return res
-        with open(file_name, 'r') as f:
-            goal_dict = json.load(f)
-
-        # key_list = list(goal_dict.keys())
-        # res.goalList = ';'.join(key_list)
-        goal_grid_dict = dict((name, goal_dict[name]['grid']) for name in goal_dict)
-
-        res.goalList = json.dumps(goal_grid_dict)
-        return res
+        msg = 'success'
+        return msg
 
 
 if __name__ == "__main__":

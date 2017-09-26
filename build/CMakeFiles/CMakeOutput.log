@@ -261,3 +261,32 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the Q_WS_X11 exist passed with the following output:
+Change Dir: /home/whj/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2416865129/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2416865129.dir/build.make CMakeFiles/cmTryCompileExec2416865129.dir/build
+make[1]: Entering directory `/home/whj/catkin_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2416865129.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -pthread -std=c++11 -Wreorder -O3 -DNDEBUG  -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2416865129.dir/CheckSymbolExists.cxx.o -c /home/whj/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTryCompileExec2416865129
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2416865129.dir/link.txt --verbose=1
+/usr/bin/c++   -pthread -std=c++11 -Wreorder -O3 -DNDEBUG     CMakeFiles/cmTryCompileExec2416865129.dir/CheckSymbolExists.cxx.o  -o cmTryCompileExec2416865129 -rdynamic 
+make[1]: Leaving directory `/home/whj/catkin_ws/build/CMakeFiles/CMakeTmp'
+
+File /home/whj/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

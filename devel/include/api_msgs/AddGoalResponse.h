@@ -24,17 +24,17 @@ struct AddGoalResponse_
   typedef AddGoalResponse_<ContainerAllocator> Type;
 
   AddGoalResponse_()
-    : res()  {
+    : msg()  {
     }
   AddGoalResponse_(const ContainerAllocator& _alloc)
-    : res(_alloc)  {
+    : msg(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _res_type;
-  _res_type res;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msg_type;
+  _msg_type msg;
 
 
 
@@ -113,12 +113,12 @@ struct MD5Sum< ::api_msgs::AddGoalResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "53af918a2a4a2a182c184142fff49b0c";
+    return "7d96ed730776804754140b85e64c862e";
   }
 
   static const char* value(const ::api_msgs::AddGoalResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x53af918a2a4a2a18ULL;
-  static const uint64_t static_value2 = 0x2c184142fff49b0cULL;
+  static const uint64_t static_value1 = 0x7d96ed7307768047ULL;
+  static const uint64_t static_value2 = 0x54140b85e64c862eULL;
 };
 
 template<class ContainerAllocator>
@@ -137,7 +137,7 @@ struct Definition< ::api_msgs::AddGoalResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string res\n\
+    return "string msg\n\
 \n\
 ";
   }
@@ -157,7 +157,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.res);
+      stream.next(m.msg);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -176,8 +176,8 @@ struct Printer< ::api_msgs::AddGoalResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::api_msgs::AddGoalResponse_<ContainerAllocator>& v)
   {
-    s << indent << "res: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.res);
+    s << indent << "msg: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msg);
   }
 };
 

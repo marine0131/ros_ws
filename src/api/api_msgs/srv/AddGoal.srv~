@@ -1,4 +1,4 @@
-string goalName
 string mapName
+string goalName
 ---
 string res

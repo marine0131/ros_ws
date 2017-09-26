@@ -1,3 +1,5 @@
 string mapName
 ---
-string goalList
+string list
+string tags
+string msg

@@ -472,48 +472,6 @@ clean_test_results_rosbridge_library/fast:
 .PHONY : clean_test_results_rosbridge_library/fast
 
 # Convenience name for target.
-rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make rosbridge_suite/rosbridge_library/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/rule
 .PHONY : rosbridge_suite/rosbridge_library/CMakeFiles/rosbridge_library_gencpp.dir/rule
@@ -683,9 +641,6 @@ help:
 	@echo "... _run_tests_rosbridge_library_rostest_test_test_all.test"
 	@echo "... clean_test_results_rosbridge_library"
 	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"

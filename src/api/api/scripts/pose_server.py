@@ -25,7 +25,7 @@ class RobotPoseSrv():
         rospy.Service('api/predefined_initialize', PredefinedInitialize, self.handle_predefinedinitialize)
 
         self.custom_goal_pub = rospy.Publisher('goal', MoveBaseGoal, queue_size=10)
-        self.initial_pose_pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped, queue_size = 1)
+        self.initial_pose_pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped, queue_size=1)
         self.tf_listener = TransformListener()
 
         # rate=rospy.Rate(5)
@@ -104,7 +104,7 @@ class RobotPoseSrv():
         head_y = req.head.y * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.y
         try:
             yaw = math.atan2(head_y - pose.pose.pose.position.y, head_x - pose.pose.pose.position.x)
-            quat = transformations.quaternion_from_euler(0,0,yaw)
+            quat = transformations.quaternion_from_euler(0, 0, yaw)
             pose.pose.pose.orientation.x = quat[0]
             pose.pose.pose.orientation.y = quat[1]
             pose.pose.pose.orientation.z = quat[2]
@@ -144,7 +144,7 @@ class RobotPoseSrv():
             pose.pose.pose.position.x = goal_dict[req.goalName]['position']['x']
             pose.pose.pose.position.y = goal_dict[req.goalName]['position']['y']
             pose.pose.pose.position.z = goal_dict[req.goalName]['position']['z']
-            res.msg = 'succuss'
+            res.msg = 'success'
         else:
             res.msg = 'goal not exist'
             return res

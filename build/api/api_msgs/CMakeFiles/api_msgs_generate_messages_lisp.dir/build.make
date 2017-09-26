@@ -49,19 +49,22 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/dev
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/msg/GridPoint.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelGoal.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameGoal.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelFile.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapData.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/AddGoal.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SaveModifiedMap.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/LaunchCmd.lisp
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelMap.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/PredefinedInitialize.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/UploadMap.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameMap.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridLaser.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SetGoal.lisp
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapList.lisp
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapToPng.lisp
-api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GetList.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridSonar.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadMap.lisp
+api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadFile.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavToGoal.lisp
 api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridPose.lisp
 
@@ -89,79 +92,79 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/RenameGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelFile.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelFile.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/DelFile.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapData.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapData.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/MapData.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapData.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/CustomInitialize.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/CustomInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/AddGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/AddGoal.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/AddGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/AddGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SaveModifiedMap.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SaveModifiedMap.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/SaveModifiedMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/SaveModifiedMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/LaunchCmd.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/LaunchCmd.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/LaunchCmd.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/LaunchCmd.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelMap.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelMap.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/DelMap.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DelMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
-
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/PredefinedInitialize.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/PredefinedInitialize.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/PredefinedInitialize.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/PredefinedInitialize.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/UploadMap.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/UploadMap.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/UploadMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/UploadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameMap.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameMap.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/RenameMap.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/RenameMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridLaser.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridLaser.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridLaser.lisp: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GridLaser.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridLaser.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SetGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SetGoal.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/SetGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/SetGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapList.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/MapList.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
-
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapToPng.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapToPng.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/MapToPng.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/MapToPng.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
-
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GetList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GetList.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GoalList.srv"
-	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GetList.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GetList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridSonar.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridSonar.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv
@@ -169,16 +172,34 @@ api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp: /home/whj/catkin_ws/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GridSonar.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridSonar.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GoalList.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GoalList.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadMap.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadMap.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/DownloadMap.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadMap.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadFile.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadFile.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/DownloadFile.srv"
+	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/DownloadFile.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
+
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavToGoal.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavToGoal.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/NavToGoal.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/NavToGoal.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridPose.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridPose.lisp: /home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv
 /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridPose.lisp: /home/whj/catkin_ws/src/api/api_msgs/msg/GridPoint.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/whj/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from api_msgs/GridPose.srv"
 	cd /home/whj/catkin_ws/build/api/api_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/whj/catkin_ws/src/api/api_msgs/srv/GridPose.srv -Iapi_msgs:/home/whj/catkin_ws/src/api/api_msgs/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p api_msgs -o /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv
 
@@ -187,19 +208,22 @@ api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/msg/GridPoint.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelGoal.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameGoal.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelFile.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapData.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/CustomInitialize.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/AddGoal.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SaveModifiedMap.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/LaunchCmd.lisp
-api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DelMap.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/PredefinedInitialize.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/UploadMap.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/RenameMap.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridLaser.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/SetGoal.lisp
-api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapList.lisp
-api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/MapToPng.lisp
-api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GetList.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridSonar.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GoalList.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadMap.lisp
+api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/DownloadFile.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/NavToGoal.lisp
 api_msgs_generate_messages_lisp: /home/whj/catkin_ws/devel/share/common-lisp/ros/api_msgs/srv/GridPose.lisp
 api_msgs_generate_messages_lisp: api/api_msgs/CMakeFiles/api_msgs_generate_messages_lisp.dir/build.make
