@@ -2,7 +2,7 @@
 import rospy
 import subprocess
 import rosnode
-import os
+import os, re
 from PIL import Image
 from api_msgs.srv import LaunchCmd, LaunchCmdResponse, MapToPng, MapToPngRequest, GoalList, GoalListRequest
 from std_srvs.srv import Empty, EmptyRequest
@@ -136,7 +136,6 @@ class RosLaunchApi():
         rospy.sleep(rospy.Duration(1.0))
         # change map ext and modify yaml file
         res = self.pgm2png(map_path + '.pgm', os.path.join(self.pkg_path, 'maps/'))
-        rospy.logwarn(map_path)
         if not res:
             return res
         self.modify_yaml(map_path + '.yaml', 'pgm', 'png')

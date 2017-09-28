@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::api_msgs::DownloadFile > {
   static const char* value()
   {
-    return "b6f4d556a4d514eccc6afa6e8d44d8f9";
+    return "a93515b901dc74b0c77f07911f2857ac";
   }
 
   static const char* value(const ::api_msgs::DownloadFile&) { return value(); }

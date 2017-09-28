@@ -1,0 +1,87 @@
+#!/usr/bin/env python
+import rospy
+import numpy as np
+from laser_line_extraction.msg import LineSegmentList, LineSegment
+from geometry_msgs.msg import Point
+from visualization_msgs.msg import Marker
+
+
+class Docking():
+    def __init__(self, laser_frame, leng, thick, publish_marker):
+        self.line_segments_msg = LineSegmentList()
+        self.laser_frame = laser_frame
+        self.docker_length = leng
+        self.docker_thickness = thick
+
+        rospy.Subscriber('line_segments', LineSegmentList, self.linesegments_callback)
+        if publish_marker:
+            marker_pub = rospy.Publisher('docker_marker', Marker, queue_size = 1)
+
+        rate = rospy.Rate(5)
+        while not rospy.is_shutdown():
+            docker_center = self.find_docker(self.line_segments_msg.line_segments)
+            if docker_center:
+                rospy.loginfo(docker_center)
+                if publish_marker:
+                    marker_pub.publish(self.setting_marker(docker_center))
+            rate.sleep()
+
+    def linesegments_callback(self, msg):
+        self.line_segments_msg = msg
+
+    def find_docker(self, line_segments):
+        docker_segment_index = []
+        for i in range(len(line_segments)-2):
+            if self.is_docker_in_segments(line_segments[i], line_segments[i+1], line_segments[i+2]):
+                docker_segment_index.append(i+1)
+        if len(docker_segment_index) == 0:
+            rospy.logwarn('could not find docker')
+            return None
+        if len(docker_segment_index) > 1:
+            rospy.logwarn('find multi docker')
+            return None
+
+        return [(line_segments[docker_segment_index[0]].start[0] +
+                 line_segments[docker_segment_index[0]].end[0]) / 2,
+                (line_segments[docker_segment_index[0]].start[1] +
+                 line_segments[docker_segment_index[0]].end[1]) / 2]
+
+    def is_docker_in_segments(self, r_seg, c_seg, l_seg):
+        if 0.05 <= np.std([r_seg.angle, c_seg.angle, l_seg.angle]):
+            return False
+        if (0 < l_seg.radius - c_seg.radius < self.docker_thickness * 2
+            and 0 < r_seg.radius - c_seg.radius < self.docker_thickness * 2):
+            if np.linalg.norm(np.array(c_seg.start) - np.array(c_seg.end)) < self.docker_length:
+                return True
+            return False
+        return False
+
+    def setting_marker(self, docker_point):
+        marker = Marker()
+        marker.header.frame_id = self.laser_frame
+        marker.id = 0
+        marker.type = Marker.POINTS
+        marker.lifetime = rospy.Duration(1.0)
+        marker.color.r = 0
+        marker.color.g = 1.0
+        marker.color.b = 0
+        marker.color.a = 1.0
+        marker.scale.x = 0.1
+        marker.scale.y = 0.1
+
+        point = Point()
+        point.x = docker_point[0]
+        point.y = docker_point[1]
+        marker.points.append(point)
+
+        return marker
+
+
+if __name__ == '__main__':
+    rospy.init_node('docking')
+    laser_frame = rospy.get_param('~laser_frame', 'laser')
+    leng = rospy.get_param('~docker_length')
+    thick = rospy.get_param('~docker_thickness')
+    marker_pub = rospy.get_param('~publish_marker')
+    Docking(laser_frame, leng, thick, marker_pub)
+    rospy.spin()

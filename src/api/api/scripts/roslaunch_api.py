@@ -163,7 +163,7 @@ class RosLaunchApi():
             os.path.basename(pgm_file))[0])) + ".png"
         try:
             pgm.save(name)
-            os.remove(pgm_file)
+            # os.remove(pgm_file)
         except Exception as e:
             rospy.logerr(str(e))
             return False

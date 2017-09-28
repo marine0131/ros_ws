@@ -25,12 +25,12 @@ struct DownloadFileResponse_
 
   DownloadFileResponse_()
     : size(0)
-    , data()
+    , link()
     , msg()  {
     }
   DownloadFileResponse_(const ContainerAllocator& _alloc)
     : size(0)
-    , data(_alloc)
+    , link(_alloc)
     , msg(_alloc)  {
   (void)_alloc;
     }
@@ -40,8 +40,8 @@ struct DownloadFileResponse_
    typedef int32_t _size_type;
   _size_type size;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _data_type;
-  _data_type data;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _link_type;
+  _link_type link;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msg_type;
   _msg_type msg;
@@ -123,12 +123,12 @@ struct MD5Sum< ::api_msgs::DownloadFileResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1785d1eb098ddacbf890a2474cd9b294";
+    return "322191564bf20455fcc4a1aa2b42b516";
   }
 
   static const char* value(const ::api_msgs::DownloadFileResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1785d1eb098ddacbULL;
-  static const uint64_t static_value2 = 0xf890a2474cd9b294ULL;
+  static const uint64_t static_value1 = 0x322191564bf20455ULL;
+  static const uint64_t static_value2 = 0xfcc4a1aa2b42b516ULL;
 };
 
 template<class ContainerAllocator>
@@ -148,7 +148,7 @@ struct Definition< ::api_msgs::DownloadFileResponse_<ContainerAllocator> >
   static const char* value()
   {
     return "int32 size\n\
-string data\n\
+string link\n\
 string msg\n\
 \n\
 ";
@@ -170,7 +170,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.size);
-      stream.next(m.data);
+      stream.next(m.link);
       stream.next(m.msg);
     }
 
@@ -192,8 +192,8 @@ struct Printer< ::api_msgs::DownloadFileResponse_<ContainerAllocator> >
   {
     s << indent << "size: ";
     Printer<int32_t>::stream(s, indent + "  ", v.size);
-    s << indent << "data: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.data);
+    s << indent << "link: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.link);
     s << indent << "msg: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msg);
   }

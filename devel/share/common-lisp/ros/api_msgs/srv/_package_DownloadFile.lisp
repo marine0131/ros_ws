@@ -3,8 +3,8 @@
           NAME
           SIZE-VAL
           SIZE
-          DATA-VAL
-          DATA
+          LINK-VAL
+          LINK
           MSG-VAL
           MSG
 ))

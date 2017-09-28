@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/whj/catkin_ws/src/laser_line_extraction/include/laser_line_extraction/line.h
+vector
+-
+boost/array.hpp
+-
+laser_line_extraction/utilities.h
+/home/whj/catkin_ws/src/laser_line_extraction/include/laser_line_extraction/laser_line_extraction/utilities.h
+
+/home/whj/catkin_ws/src/laser_line_extraction/include/laser_line_extraction/utilities.h
+vector
+-
+cmath
+-
+
+/home/whj/catkin_ws/src/laser_line_extraction/src/line.cpp
+laser_line_extraction/line.h
+/home/whj/catkin_ws/src/laser_line_extraction/src/laser_line_extraction/line.h
+

@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::api_msgs::GridLaser > {
   static const char* value()
   {
-    return "70385a002e518c7e14ab0566622593e3";
+    return "498668283682ba74a2eee3927d47dcd1";
   }
 
   static const char* value(const ::api_msgs::GridLaser&) { return value(); }

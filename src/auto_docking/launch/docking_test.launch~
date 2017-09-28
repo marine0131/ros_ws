@@ -1,0 +1,9 @@
+<launch>   
+	<include file="$find laser_line_extraction)/launch/my_example.launch" />
+	
+    <!--docking server-->
+    <node name="docking" pkg="auto_docking" type="docking.py" output="screen">
+    	<rosparam file="$(find auto_docking)/config/docker_params.yaml" command="load"/>
+    </node>
+ 
+</launch>

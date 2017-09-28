@@ -42,6 +42,7 @@
     <node name="pose_server" pkg="api" type="pose_server.py" output="screen">
     	<param name="robot_frame" value="$(arg robot_frame)"/>
     	<param name="map_frame" value="$(arg map_frame)" />
+    	<rosparam file="$(find xunjian_nav)/config/costmap_common_params.yaml" command="load" ns="pose_server"/>
     </node>
     
     <!--laser server-->
@@ -58,6 +59,7 @@
 	<!--file server-->
     <node name="file_server" pkg="api" type="file_server.py" output="screen">
     	<param name="api_pkg_path" value="$(arg api_pkg_path)" />
+    	<param name="server_ip" type="string" value="192.168.10.155"/>
     </node>
 	
 	<!--*******************************nav_goal********************************-->

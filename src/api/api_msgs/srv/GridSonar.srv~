@@ -1,3 +1,5 @@
-string mapName
+string request
 ---
-string goalList
+string point
+string mapInfo
+string msg

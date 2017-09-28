@@ -132,15 +132,15 @@ import struct
 
 
 class DownloadFileResponse(genpy.Message):
-  _md5sum = "1785d1eb098ddacbf890a2474cd9b294"
+  _md5sum = "322191564bf20455fcc4a1aa2b42b516"
   _type = "api_msgs/DownloadFileResponse"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int32 size
-string data
+string link
 string msg
 
 """
-  __slots__ = ['size','data','msg']
+  __slots__ = ['size','link','msg']
   _slot_types = ['int32','string','string']
 
   def __init__(self, *args, **kwds):
@@ -151,7 +151,7 @@ string msg
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       size,data,msg
+       size,link,msg
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -162,13 +162,13 @@ string msg
       #message fields cannot be None, assign default values for those that are
       if self.size is None:
         self.size = 0
-      if self.data is None:
-        self.data = ''
+      if self.link is None:
+        self.link = ''
       if self.msg is None:
         self.msg = ''
     else:
       self.size = 0
-      self.data = ''
+      self.link = ''
       self.msg = ''
 
   def _get_types(self):
@@ -184,7 +184,7 @@ string msg
     """
     try:
       buff.write(_struct_i.pack(self.size))
-      _x = self.data
+      _x = self.link
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -221,9 +221,9 @@ string msg
       start = end
       end += length
       if python3:
-        self.data = str[start:end].decode('utf-8')
+        self.link = str[start:end].decode('utf-8')
       else:
-        self.data = str[start:end]
+        self.link = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -246,7 +246,7 @@ string msg
     """
     try:
       buff.write(_struct_i.pack(self.size))
-      _x = self.data
+      _x = self.link
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -284,9 +284,9 @@ string msg
       start = end
       end += length
       if python3:
-        self.data = str[start:end].decode('utf-8')
+        self.link = str[start:end].decode('utf-8')
       else:
-        self.data = str[start:end]
+        self.link = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -304,6 +304,6 @@ _struct_I = genpy.struct_I
 _struct_i = struct.Struct("<i")
 class DownloadFile(object):
   _type          = 'api_msgs/DownloadFile'
-  _md5sum = 'b6f4d556a4d514eccc6afa6e8d44d8f9'
+  _md5sum = 'a93515b901dc74b0c77f07911f2857ac'
   _request_class  = DownloadFileRequest
   _response_class = DownloadFileResponse

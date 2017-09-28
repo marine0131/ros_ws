@@ -3,7 +3,7 @@
 import rospy
 import json
 import os
-import math.atan2
+import math
 from geometry_msgs.msg import PoseStamped
 from tf import transformations
 from move_base_msgs.msg import MoveBaseGoal
@@ -42,6 +42,7 @@ class GoalListSrv():
     def map_callback(self, msg):
         self.mapinfo.info = msg.info
 
+    # nav to a selected goal
     def handle_navgoal(self, req):
         rospy.loginfo('nav to goal %s in map %s', req.goalName, req.mapName)
         goal_msg = MoveBaseGoal()
@@ -101,6 +102,7 @@ class GoalListSrv():
         res.msg = 'success'
         return res
 
+    # add current pose as a goal
     def handle_addgoal(self, req):
         rospy.loginfo('add a goal "%s" in map "%s"', req.goalName, req.mapName)
         res = AddGoalResponse()
@@ -108,6 +110,7 @@ class GoalListSrv():
         res.msg = self.save_to_json(json_path, req.goalName, self.get_posedict(self.pose_msg))
         return res
 
+    # add custom pose as a goal
     def handle_addcustomgoal(self, req):
         rospy.loginfo('add a goal "%s" in map "%s"', req.goalName, req.mapName)
         res = CustomInitializeResponse()
@@ -149,8 +152,8 @@ class GoalListSrv():
 
         try:
             goal_dict.pop(req.goalName)
-        except Exception as err:
-            res.msg = 'goal ' + str(err) + ' not exit'
+        except Exception as e:
+            res.msg = str(e)
             return res
 
         with open(file_name, 'w') as f:
@@ -203,6 +206,7 @@ class GoalListSrv():
         res.msg = self.set_special_goal(file_path, self.SPECIAL_GOAL[1], req.goalName)
         return res
 
+    # set a goal with special function
     def set_special_goal(self, file_path, type_name, goal_name):
         try:
             with open(file_path, 'r') as f:
@@ -222,6 +226,7 @@ class GoalListSrv():
         msg = 'success'
         return msg
 
+    # init a map's goal list
     def init_goallist(self, goal_path):
         # initial pose
         pose = PoseStamped()
@@ -236,20 +241,13 @@ class GoalListSrv():
         with open(goal_path, 'w') as f:
             json.dump(goal_dict, f)
 
+    # get a custom dict of pose
     def get_posedict(self, pose_msg):
         pose_dict = {}
         quat_dict = {}
         grid_dict = {}
 
         pose = {}
-        # for test
-        # pose_dict['x'] = msg.origin.position.x
-        # pose_dict['y'] = msg.origin.position.y
-        # pose_dict['z'] = msg.origin.position.z
-        # quat_dict['x'] = msg.origin.orientation.x
-        # quat_dict['y'] = msg.origin.orientation.y
-        # quat_dict['z'] = msg.origin.orientation.z
-        # quat_dict['w'] = msg.origin.orientation.w
         pose_dict['x'] = pose_msg.pose.position.x
         pose_dict['y'] = pose_msg.pose.position.y
         pose_dict['z'] = pose_msg.pose.position.z
@@ -271,6 +269,7 @@ class GoalListSrv():
 
         return pose
 
+    # read the json file, add a goal and save to json
     def save_to_json(self, path, goal_name, pose):
         goal_dict = {}
         if not os.path.exists(path):

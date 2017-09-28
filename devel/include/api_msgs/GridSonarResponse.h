@@ -24,19 +24,24 @@ struct GridSonarResponse_
   typedef GridSonarResponse_<ContainerAllocator> Type;
 
   GridSonarResponse_()
-    : data()
+    : gridPoint()
+    , mapInfo()
     , msg()  {
     }
   GridSonarResponse_(const ContainerAllocator& _alloc)
-    : data(_alloc)
+    : gridPoint(_alloc)
+    , mapInfo(_alloc)
     , msg(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _data_type;
-  _data_type data;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _gridPoint_type;
+  _gridPoint_type gridPoint;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _mapInfo_type;
+  _mapInfo_type mapInfo;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msg_type;
   _msg_type msg;
@@ -118,12 +123,12 @@ struct MD5Sum< ::api_msgs::GridSonarResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "85104d10dd2c925d14e862be5e087647";
+    return "6bf50c7b16b1ecbb2a165a40a30828f6";
   }
 
   static const char* value(const ::api_msgs::GridSonarResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x85104d10dd2c925dULL;
-  static const uint64_t static_value2 = 0x14e862be5e087647ULL;
+  static const uint64_t static_value1 = 0x6bf50c7b16b1ecbbULL;
+  static const uint64_t static_value2 = 0x2a165a40a30828f6ULL;
 };
 
 template<class ContainerAllocator>
@@ -142,7 +147,8 @@ struct Definition< ::api_msgs::GridSonarResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string data\n\
+    return "string gridPoint\n\
+string mapInfo\n\
 string msg\n\
 \n\
 ";
@@ -163,7 +169,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.data);
+      stream.next(m.gridPoint);
+      stream.next(m.mapInfo);
       stream.next(m.msg);
     }
 
@@ -183,8 +190,10 @@ struct Printer< ::api_msgs::GridSonarResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::api_msgs::GridSonarResponse_<ContainerAllocator>& v)
   {
-    s << indent << "data: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.data);
+    s << indent << "gridPoint: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.gridPoint);
+    s << indent << "mapInfo: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.mapInfo);
     s << indent << "msg: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msg);
   }

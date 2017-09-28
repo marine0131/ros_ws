@@ -132,15 +132,16 @@ import struct
 
 
 class GridSonarResponse(genpy.Message):
-  _md5sum = "85104d10dd2c925d14e862be5e087647"
+  _md5sum = "6bf50c7b16b1ecbb2a165a40a30828f6"
   _type = "api_msgs/GridSonarResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string data
+  _full_text = """string gridPoint
+string mapInfo
 string msg
 
 """
-  __slots__ = ['data','msg']
-  _slot_types = ['string','string']
+  __slots__ = ['gridPoint','mapInfo','msg']
+  _slot_types = ['string','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -150,7 +151,7 @@ string msg
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       data,msg
+       gridPoint,mapInfo,msg
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -159,12 +160,15 @@ string msg
     if args or kwds:
       super(GridSonarResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.data is None:
-        self.data = ''
+      if self.gridPoint is None:
+        self.gridPoint = ''
+      if self.mapInfo is None:
+        self.mapInfo = ''
       if self.msg is None:
         self.msg = ''
     else:
-      self.data = ''
+      self.gridPoint = ''
+      self.mapInfo = ''
       self.msg = ''
 
   def _get_types(self):
@@ -179,7 +183,16 @@ string msg
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.data
+      _x = self.gridPoint
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.mapInfo
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -213,9 +226,18 @@ string msg
       start = end
       end += length
       if python3:
-        self.data = str[start:end].decode('utf-8')
+        self.gridPoint = str[start:end].decode('utf-8')
       else:
-        self.data = str[start:end]
+        self.gridPoint = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.mapInfo = str[start:end].decode('utf-8')
+      else:
+        self.mapInfo = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -237,7 +259,16 @@ string msg
     :param numpy: numpy python module
     """
     try:
-      _x = self.data
+      _x = self.gridPoint
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self.mapInfo
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -272,9 +303,18 @@ string msg
       start = end
       end += length
       if python3:
-        self.data = str[start:end].decode('utf-8')
+        self.gridPoint = str[start:end].decode('utf-8')
       else:
-        self.data = str[start:end]
+        self.gridPoint = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.mapInfo = str[start:end].decode('utf-8')
+      else:
+        self.mapInfo = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -291,6 +331,6 @@ string msg
 _struct_I = genpy.struct_I
 class GridSonar(object):
   _type          = 'api_msgs/GridSonar'
-  _md5sum = '669b7318ba1fac1b95da7f086bcce00d'
+  _md5sum = 'dbd67d6adab3380a19248979a79aadd6'
   _request_class  = GridSonarRequest
   _response_class = GridSonarResponse

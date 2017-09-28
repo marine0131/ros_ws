@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::api_msgs::GridSonar > {
   static const char* value()
   {
-    return "669b7318ba1fac1b95da7f086bcce00d";
+    return "dbd67d6adab3380a19248979a79aadd6";
   }
 
   static const char* value(const ::api_msgs::GridSonar&) { return value(); }

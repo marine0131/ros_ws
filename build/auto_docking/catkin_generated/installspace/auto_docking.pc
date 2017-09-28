@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/install
+
+Name: auto_docking
+Description: Description of auto_docking
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/whj/catkin_ws/install/lib 
+Requires: 

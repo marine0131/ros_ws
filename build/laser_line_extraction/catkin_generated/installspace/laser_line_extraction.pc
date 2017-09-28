@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/install
+
+Name: laser_line_extraction
+Description: Description of laser_line_extraction
+Version: 0.1.0
+Cflags: -I/home/whj/catkin_ws/install/include
+Libs: -L/home/whj/catkin_ws/install/lib -llaser_line_extraction
+Requires: message_runtime roscpp

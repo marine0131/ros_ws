@@ -1,0 +1,8 @@
+prefix=/home/whj/catkin_ws/devel
+
+Name: smach_msgs
+Description: Description of smach_msgs
+Version: 2.0.1
+Cflags: -I/home/whj/catkin_ws/devel/include
+Libs: -L/home/whj/catkin_ws/devel/lib 
+Requires: message_runtime

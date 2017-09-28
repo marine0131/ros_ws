@@ -10,20 +10,22 @@ from api_msgs.srv import GridSonar, GridSonarResponse
 
 
 class GridSonarSrv():
-    def __init__(self, SONAR_FRAME, MAP_FRAME):
+    def __init__(self, SONAR_FRAME, MAP_FRAME, ROBOT_FRAME):
         # GOAL_LIST_DIR = rospy.get_param('~goal_list_dir')
         # self.path = MAP_DIR
         self.sonar_frame = SONAR_FRAME
         self.map_frame = MAP_FRAME
+        self.robot_frame = ROBOT_FRAME
         self.mapinfo = OccupancyGrid()
         self.sonar_msg = []
 
         self.tf_listener = TransformListener()
         rospy.Service('api/grid_sonar', GridSonar, self.handle_gridsonar)
+        rospy.Service('api/real_time_sonar', GridSonar, self.handle_realtimesonar)
         rospy.Subscriber("map", OccupancyGrid, self.map_callback, queue_size=1)
         rospy.Subscriber('range_dist', Sonar, self.sonar_callback, queue_size=1)
 
-    def handle_gridsonar(self, req):
+    def handle_realtimesonar(self, req):
         i = 0
         sonar = {}
         for t in self.sonar_frame:
@@ -60,10 +62,63 @@ class GridSonarSrv():
             pt['end'] = [end_x, end_y]
             sonar[t] = pt
 
-        sonar_response = GridSonarResponse()
-        sonar_response.data = json.dumps(sonar)
-        sonar_response.msg = 'success'
-        return sonar_response
+        mapInfo = {}
+        mapInfo['gridWidth'] = self.mapinfo.info.width
+        mapInfo['gridHeight'] = self.mapinfo.info.height
+        mapInfo['resolution'] = self.mapinfo.info.resolution
+
+        res = GridSonarResponse()
+        res.gridPoint = json.dumps(sonar)
+        res.mapInfo = json.dumps(mapInfo)
+        res.msg = 'success'
+        return res
+
+    def handle_gridsonar(self, req):
+        i = 0
+        sonar = {}
+        for t in self.sonar_frame:
+            pt = {}
+            sonar_pt = PointStamped()
+            sonar_pt.header.frame_id = t
+            # transform sonar center point from sonar to base_link
+            self.tf_listener.waitForTransform(self.robot_frame, t, rospy.Time.now(),
+                                              rospy.Duration(1.0))
+            temp = self.tf_listener.transformPoint(self.robot_frame, sonar_pt)
+            # calc sonar center grid in map
+            # start_x = (int)((temp.point.x - self.mapinfo.info.origin.position.x)
+            #                 / self.mapinfo.info.resolution)
+            # start_y = (int)((temp.point.y - self.mapinfo.info.origin.position.y)
+            #                 / self.mapinfo.info.resolution)
+            start_x = (int)(temp.point.x / 0.01)
+            start_y = (int)(temp.point.y / 0.01)
+
+            # calc sonar end point from sonar to base_link
+            sonar_pt.point.x = self.sonar_msg[i] / 100.0
+            i += 1
+            temp = self.tf_listener.transformPoint(self.robot_frame, sonar_pt)
+            # calc sonar end grid in map
+            # end_x = (int)((temp.point.x - self.mapinfo.info.origin.position.x)
+            #               / self.mapinfo.info.resolution)
+            # end_y = (int)((temp.point.y - self.mapinfo.info.origin.position.y)
+            #               / self.mapinfo.info.resolution)
+            end_x = (int)(temp.point.x / 0.01)
+            end_y = (int)(temp.point.y / 0.01)
+
+            pt['start'] = [start_x, start_y]
+            pt['end'] = [end_x, end_y]
+            pt['range'] = sonar_pt.point.x
+            sonar[t] = pt
+
+        mapInfo = {}
+        # mapInfo['gridWidth'] = self.mapinfo.info.width
+        # mapInfo['gridHeight'] = self.mapinfo.info.height
+        # mapInfo['resolution'] = self.mapinfo.info.resolution
+
+        res = GridSonarResponse()
+        res.gridPoint = json.dumps(sonar)
+        res.mapInfo = json.dumps(mapInfo)
+        res.msg = 'success'
+        return res
 
     def map_callback(self, msg):
         self.mapinfo.info = msg.info
@@ -76,5 +131,6 @@ if __name__ == "__main__":
     rospy.init_node('grid_sonar_server')
     sonar_frame = rospy.get_param('~sonar_frame').split(',')
     map_frame = rospy.get_param('~map_frame', 'map')
-    GridSonarSrv(sonar_frame, map_frame)
+    robot_frame = rospy.get_param('~robot_frame', 'base_link')
+    GridSonarSrv(sonar_frame, map_frame, robot_frame)
     rospy.spin()

@@ -25,34 +25,24 @@ struct GridLaserResponse_
   typedef GridLaserResponse_<ContainerAllocator> Type;
 
   GridLaserResponse_()
-    : laserPoint()
-    , mapGridWidth(0)
-    , mapGridHeight(0)
-    , mapResolution(0.0)
+    : gridPoint()
+    , mapInfo()
     , msg()  {
     }
   GridLaserResponse_(const ContainerAllocator& _alloc)
-    : laserPoint(_alloc)
-    , mapGridWidth(0)
-    , mapGridHeight(0)
-    , mapResolution(0.0)
+    : gridPoint(_alloc)
+    , mapInfo(_alloc)
     , msg(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::vector< ::api_msgs::GridPoint_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::api_msgs::GridPoint_<ContainerAllocator> >::other >  _laserPoint_type;
-  _laserPoint_type laserPoint;
+   typedef std::vector< ::api_msgs::GridPoint_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::api_msgs::GridPoint_<ContainerAllocator> >::other >  _gridPoint_type;
+  _gridPoint_type gridPoint;
 
-   typedef int32_t _mapGridWidth_type;
-  _mapGridWidth_type mapGridWidth;
-
-   typedef int32_t _mapGridHeight_type;
-  _mapGridHeight_type mapGridHeight;
-
-   typedef float _mapResolution_type;
-  _mapResolution_type mapResolution;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _mapInfo_type;
+  _mapInfo_type mapInfo;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msg_type;
   _msg_type msg;
@@ -134,12 +124,12 @@ struct MD5Sum< ::api_msgs::GridLaserResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "fae0bf771ee3824e3c4d670821bd5e83";
+    return "46ab49f593d6b847961f7f5b6a1ea86e";
   }
 
   static const char* value(const ::api_msgs::GridLaserResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xfae0bf771ee3824eULL;
-  static const uint64_t static_value2 = 0x3c4d670821bd5e83ULL;
+  static const uint64_t static_value1 = 0x46ab49f593d6b847ULL;
+  static const uint64_t static_value2 = 0x961f7f5b6a1ea86eULL;
 };
 
 template<class ContainerAllocator>
@@ -158,10 +148,8 @@ struct Definition< ::api_msgs::GridLaserResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "GridPoint[] laserPoint\n\
-int32 mapGridWidth\n\
-int32 mapGridHeight\n\
-float32 mapResolution\n\
+    return "GridPoint[] gridPoint\n\
+string mapInfo\n\
 string msg\n\
 \n\
 \n\
@@ -187,10 +175,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.laserPoint);
-      stream.next(m.mapGridWidth);
-      stream.next(m.mapGridHeight);
-      stream.next(m.mapResolution);
+      stream.next(m.gridPoint);
+      stream.next(m.mapInfo);
       stream.next(m.msg);
     }
 
@@ -210,20 +196,16 @@ struct Printer< ::api_msgs::GridLaserResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::api_msgs::GridLaserResponse_<ContainerAllocator>& v)
   {
-    s << indent << "laserPoint[]" << std::endl;
-    for (size_t i = 0; i < v.laserPoint.size(); ++i)
+    s << indent << "gridPoint[]" << std::endl;
+    for (size_t i = 0; i < v.gridPoint.size(); ++i)
     {
-      s << indent << "  laserPoint[" << i << "]: ";
+      s << indent << "  gridPoint[" << i << "]: ";
       s << std::endl;
       s << indent;
-      Printer< ::api_msgs::GridPoint_<ContainerAllocator> >::stream(s, indent + "    ", v.laserPoint[i]);
+      Printer< ::api_msgs::GridPoint_<ContainerAllocator> >::stream(s, indent + "    ", v.gridPoint[i]);
     }
-    s << indent << "mapGridWidth: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.mapGridWidth);
-    s << indent << "mapGridHeight: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.mapGridHeight);
-    s << indent << "mapResolution: ";
-    Printer<float>::stream(s, indent + "  ", v.mapResolution);
+    s << indent << "mapInfo: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.mapInfo);
     s << indent << "msg: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msg);
   }

@@ -3,12 +3,14 @@ import rospy
 import math
 import os
 import json
+import ast
 from tf import TransformListener, transformations
 from geometry_msgs.msg import PointStamped, PoseWithCovarianceStamped
 from nav_msgs.msg import OccupancyGrid
 from move_base_msgs.msg import MoveBaseGoal
 from api_msgs.srv import GridPose, GridPoseResponse, SetGoal, SetGoalResponse
 from api_msgs.srv import CustomInitialize, CustomInitializeResponse, PredefinedInitialize, PredefinedInitializeResponse
+from api_msgs.srv import GridSonar, GridSonarResponse
 
 
 class RobotPoseSrv():
@@ -20,6 +22,7 @@ class RobotPoseSrv():
         rospy.Subscriber("map", OccupancyGrid, self.map_callback)
         # pose_pub = rospy.Publisher('grid_pose',GridPose,queue_size=10)
         rospy.Service('api/grid_pose', GridPose, self.handle_pose)
+        rospy.Service('api/footprint', GridSonar, self.handle_footprint)
         rospy.Service('api/set_goal', SetGoal, self.handle_goal)
         rospy.Service('api/custom_initialize', CustomInitialize, self.handle_custominitialize)
         rospy.Service('api/predefined_initialize', PredefinedInitialize, self.handle_predefinedinitialize)
@@ -71,6 +74,31 @@ class RobotPoseSrv():
         # rospy.loginfo(grid_pose)
         return grid_pose
 
+    def handle_footprint(self, req):
+        res = GridSonarResponse()
+        footprint = ast.literal_eval(rospy.get_param('/pose_server/pose_server/footprint'))
+        point = []
+        for p in footprint:
+            # x = (int)((p[0] - self.mapinfo.info.origin.position.x) / self.mapinfo.info.resolution)
+            # y = (int)((p[1] - self.mapinfo.info.origin.position.y) / self.mapinfo.info.resolution)
+            x = (int)(p[0] / 0.01)
+            y = (int)(p[1] / 0.01)
+
+            dic = {}
+            dic['x'] = x
+            dic['y'] = y
+            point.append(dic)
+
+        mapInfo = {}
+        # mapInfo['gridWidth'] = self.mapinfo.info.width
+        # mapInfo['gridHeight'] = self.mapinfo.info.height
+        # mapInfo['resolution'] = self.mapinfo.info.resolution
+
+        res.gridPoint = str(point)
+        res.mapInfo = json.dumps(mapInfo)
+        res.msg = 'success'
+        return res
+
     def handle_goal(self, req):
         rospy.loginfo('recieve a custom goal: x %d, y %d', req.grid_x, req.grid_y)
         g = MoveBaseGoal()
@@ -104,7 +132,7 @@ class RobotPoseSrv():
         head_y = req.head.y * self.mapinfo.info.resolution + self.mapinfo.info.origin.position.y
         try:
             yaw = math.atan2(head_y - pose.pose.pose.position.y, head_x - pose.pose.pose.position.x)
-            quat = transformations.quaternion_from_euler(0,0,yaw)
+            quat = transformations.quaternion_from_euler(0, 0, yaw)
             pose.pose.pose.orientation.x = quat[0]
             pose.pose.pose.orientation.y = quat[1]
             pose.pose.pose.orientation.z = quat[2]

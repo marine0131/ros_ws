@@ -1,0 +1,4 @@
+robot_frame: /base_link
+docker_length: 0.35 #m
+docker_thickness: 0.15 #m
+publish_marker: true

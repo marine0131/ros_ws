@@ -27,7 +27,7 @@ class FakeDataPub():
         scan_msg.range_min = 0.05
         scan_msg.scan_time = 0.06666666
         scan_msg.header.frame_id = 'laser'
-        with open('/home/whj/catkin_ws/src/api/api/data/fake_laser_ranges.txt') as f:
+        with open('/home/whj/catkin_ws/src/api/api/data/scan2.txt') as f:
             scan_msg.ranges = map(float, f.readline().split(','))
             scan_msg.intensities = map(float, f.readline().split(','))
 

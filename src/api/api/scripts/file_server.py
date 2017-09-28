@@ -3,26 +3,30 @@
 import rospy
 import base64
 import os
+import json
 from api_msgs.srv import GetList, GetListResponse,  DelFile, DelFileResponse, DownloadFile, DownloadFileResponse
 from api_msgs.srv import DownloadMap, DownloadMapResponse, UploadMap, UploadMapResponse
 
 class FileSrv():
-    def __init__(self, pkg_path):
+    def __init__(self, pkg_path, ip):
         self.pkg_path = pkg_path
+        self.server_ip = ip
         rospy.Service('api/get_bag_list', GetList, self.handle_getbaglist)
         rospy.Service('api/del_bag', DelFile, self.handle_delbag)
-        rospy.Service('api/download_bag', DownloadFile, self.handle_getbag)
+        rospy.Service('api/download_bag', DownloadFile, self.handle_downloadbag)
         rospy.Service('api/download_map', DownloadMap, self.handle_getmap)
         rospy.Service('api/upload_map', UploadMap, self.handle_uploadmap)
 
     def handle_getbaglist(self, req):
-        f_list = os.listdir(os.path.join(self.pkg_path, 'bags/'))
-        bag_list = []
+        bag_path = os.path.join(self.pkg_path, 'bags/')
+        f_list = os.listdir(bag_path)
+        bag_dict = {}
         for f in f_list:
             if os.path.splitext(f)[1] == '.bag':
-                bag_list.append(f)
+                bag_dict[f] = os.path.getsize(bag_path+f)
+
         res = GetListResponse()
-        res.list = ';'.join(bag_list)
+        res.list = json.dumps(bag_dict)
         res.msg = 'success'
         return res
 
@@ -37,7 +41,7 @@ class FileSrv():
             res.msg = str(e)
         return res
 
-    def handle_getbag(self, req):
+    def handle_downloadbag(self, req):
         res = DownloadFileResponse()
         bag_file = os.path.join(self.pkg_path, 'bags/' + req.name)
         # try:
@@ -50,7 +54,8 @@ class FileSrv():
 
         try:
             res.size = os.path.getsize(bag_file)
-            res.data = self.convertFileToOneAndZero(bag_file)
+            #res.data = self.convertFileToOneAndZero(bag_file)
+            res.link= self.server_ip + ':80/bags/'+req.name
             res.msg = 'success'
         except Exception as e:
             res.msg = str(e)
@@ -59,8 +64,8 @@ class FileSrv():
 
     def handle_getmap(self, req):
         res = DownloadMapResponse()
-        png_file = os.path.join(self.pkg_path, 'maps/' + req.name + '.png')
-        yaml_file = os.path.join(self.pkg_path, 'maps/' + req.name + '.yaml')
+        # png_file = os.path.join(self.pkg_path, 'maps/' + req.name + '.png')
+        # yaml_file = os.path.join(self.pkg_path, 'maps/' + req.name + '.yaml')
         # try:
         #     with open(png_file, 'rb') as f:
         #         res.mapFile = str(base64.b64encode(f.read()))
@@ -70,8 +75,10 @@ class FileSrv():
         #     res.msg = 'success'
         # except Exception as e:
         #     res.msg = str(e)
-        res.mapFile = self.convertFileToOneAndZero(png_file)
-        res.yamlFile = self.convertFileToOneAndZero(yaml_file)
+        # res.mapFile = self.convertFileToOneAndZero(png_file)
+        # res.yamlFile = self.convertFileToOneAndZero(yaml_file)
+        res.mapFile = self.server_ip + ':80/maps/' + req.name + '.png'
+        res.yamlFile = self.server_ip + ':80/maps/' + req.name + '.yaml'
         res.msg = 'success'
 
         return res
@@ -123,5 +130,6 @@ class FileSrv():
 if __name__ == "__main__":
     rospy.init_node('file_server')
     pkg_path = rospy.get_param('~api_pkg_path', '/home/whj/catkin_ws/src/api/api/')
-    FileSrv(pkg_path)
+    ip = rospy.get_param('~server_ip', '192.168.10.155')
+    FileSrv(pkg_path, ip)
     rospy.spin()

@@ -248,48 +248,6 @@ dynamic_reconfigure_generate_messages_py/fast:
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
-sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make sick_tim/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make sick_tim/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/whj/catkin_ws/build && $(MAKE) -f sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make sick_tim/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 sick_tim/CMakeFiles/sick_tim310.dir/rule:
 	cd /home/whj/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sick_tim/CMakeFiles/sick_tim310.dir/rule
 .PHONY : sick_tim/CMakeFiles/sick_tim310.dir/rule
@@ -748,9 +706,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... sick_tim310"
 	@echo "... sick_tim310_1130000m01"
 	@echo "... sick_tim310s01"

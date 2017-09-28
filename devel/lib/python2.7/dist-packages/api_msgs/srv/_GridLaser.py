@@ -133,13 +133,11 @@ import struct
 import api_msgs.msg
 
 class GridLaserResponse(genpy.Message):
-  _md5sum = "fae0bf771ee3824e3c4d670821bd5e83"
+  _md5sum = "46ab49f593d6b847961f7f5b6a1ea86e"
   _type = "api_msgs/GridLaserResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """GridPoint[] laserPoint
-int32 mapGridWidth
-int32 mapGridHeight
-float32 mapResolution
+  _full_text = """GridPoint[] gridPoint
+string mapInfo
 string msg
 
 
@@ -148,8 +146,8 @@ MSG: api_msgs/GridPoint
 int32 x
 int32 y
 """
-  __slots__ = ['laserPoint','mapGridWidth','mapGridHeight','mapResolution','msg']
-  _slot_types = ['api_msgs/GridPoint[]','int32','int32','float32','string']
+  __slots__ = ['gridPoint','mapInfo','msg']
+  _slot_types = ['api_msgs/GridPoint[]','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -159,7 +157,7 @@ int32 y
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       laserPoint,mapGridWidth,mapGridHeight,mapResolution,msg
+       gridPoint,mapInfo,msg
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -168,21 +166,15 @@ int32 y
     if args or kwds:
       super(GridLaserResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.laserPoint is None:
-        self.laserPoint = []
-      if self.mapGridWidth is None:
-        self.mapGridWidth = 0
-      if self.mapGridHeight is None:
-        self.mapGridHeight = 0
-      if self.mapResolution is None:
-        self.mapResolution = 0.
+      if self.gridPoint is None:
+        self.gridPoint = []
+      if self.mapInfo is None:
+        self.mapInfo = ''
       if self.msg is None:
         self.msg = ''
     else:
-      self.laserPoint = []
-      self.mapGridWidth = 0
-      self.mapGridHeight = 0
-      self.mapResolution = 0.
+      self.gridPoint = []
+      self.mapInfo = ''
       self.msg = ''
 
   def _get_types(self):
@@ -197,13 +189,20 @@ int32 y
     :param buff: buffer, ``StringIO``
     """
     try:
-      length = len(self.laserPoint)
+      length = len(self.gridPoint)
       buff.write(_struct_I.pack(length))
-      for val1 in self.laserPoint:
+      for val1 in self.gridPoint:
         _x = val1
         buff.write(_struct_2i.pack(_x.x, _x.y))
-      _x = self
-      buff.write(_struct_2if.pack(_x.mapGridWidth, _x.mapGridHeight, _x.mapResolution))
+      _x = self.mapInfo
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -222,24 +221,29 @@ int32 y
     :param str: byte array of serialized message, ``str``
     """
     try:
-      if self.laserPoint is None:
-        self.laserPoint = None
+      if self.gridPoint is None:
+        self.gridPoint = None
       end = 0
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      self.laserPoint = []
+      self.gridPoint = []
       for i in range(0, length):
         val1 = api_msgs.msg.GridPoint()
         _x = val1
         start = end
         end += 8
         (_x.x, _x.y,) = _struct_2i.unpack(str[start:end])
-        self.laserPoint.append(val1)
-      _x = self
+        self.gridPoint.append(val1)
       start = end
-      end += 12
-      (_x.mapGridWidth, _x.mapGridHeight, _x.mapResolution,) = _struct_2if.unpack(str[start:end])
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.mapInfo = str[start:end].decode('utf-8')
+      else:
+        self.mapInfo = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -261,13 +265,20 @@ int32 y
     :param numpy: numpy python module
     """
     try:
-      length = len(self.laserPoint)
+      length = len(self.gridPoint)
       buff.write(_struct_I.pack(length))
-      for val1 in self.laserPoint:
+      for val1 in self.gridPoint:
         _x = val1
         buff.write(_struct_2i.pack(_x.x, _x.y))
-      _x = self
-      buff.write(_struct_2if.pack(_x.mapGridWidth, _x.mapGridHeight, _x.mapResolution))
+      _x = self.mapInfo
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -287,24 +298,29 @@ int32 y
     :param numpy: numpy python module
     """
     try:
-      if self.laserPoint is None:
-        self.laserPoint = None
+      if self.gridPoint is None:
+        self.gridPoint = None
       end = 0
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      self.laserPoint = []
+      self.gridPoint = []
       for i in range(0, length):
         val1 = api_msgs.msg.GridPoint()
         _x = val1
         start = end
         end += 8
         (_x.x, _x.y,) = _struct_2i.unpack(str[start:end])
-        self.laserPoint.append(val1)
-      _x = self
+        self.gridPoint.append(val1)
       start = end
-      end += 12
-      (_x.mapGridWidth, _x.mapGridHeight, _x.mapResolution,) = _struct_2if.unpack(str[start:end])
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.mapInfo = str[start:end].decode('utf-8')
+      else:
+        self.mapInfo = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -319,10 +335,9 @@ int32 y
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_2if = struct.Struct("<2if")
 _struct_2i = struct.Struct("<2i")
 class GridLaser(object):
   _type          = 'api_msgs/GridLaser'
-  _md5sum = '70385a002e518c7e14ab0566622593e3'
+  _md5sum = '498668283682ba74a2eee3927d47dcd1'
   _request_class  = GridLaserRequest
   _response_class = GridLaserResponse

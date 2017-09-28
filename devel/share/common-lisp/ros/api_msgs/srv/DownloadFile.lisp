@@ -55,10 +55,10 @@
   "api_msgs/DownloadFileRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DownloadFile-request>)))
   "Returns md5sum for a message object of type '<DownloadFile-request>"
-  "b6f4d556a4d514eccc6afa6e8d44d8f9")
+  "a93515b901dc74b0c77f07911f2857ac")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DownloadFile-request)))
   "Returns md5sum for a message object of type 'DownloadFile-request"
-  "b6f4d556a4d514eccc6afa6e8d44d8f9")
+  "a93515b901dc74b0c77f07911f2857ac")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DownloadFile-request>)))
   "Returns full string definition for message of type '<DownloadFile-request>"
   (cl:format cl:nil "string name~%~%~%"))
@@ -82,9 +82,9 @@
     :initarg :size
     :type cl:integer
     :initform 0)
-   (data
-    :reader data
-    :initarg :data
+   (link
+    :reader link
+    :initarg :link
     :type cl:string
     :initform "")
    (msg
@@ -107,10 +107,10 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader api_msgs-srv:size-val is deprecated.  Use api_msgs-srv:size instead.")
   (size m))
 
-(cl:ensure-generic-function 'data-val :lambda-list '(m))
-(cl:defmethod data-val ((m <DownloadFile-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader api_msgs-srv:data-val is deprecated.  Use api_msgs-srv:data instead.")
-  (data m))
+(cl:ensure-generic-function 'link-val :lambda-list '(m))
+(cl:defmethod link-val ((m <DownloadFile-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader api_msgs-srv:link-val is deprecated.  Use api_msgs-srv:link instead.")
+  (link m))
 
 (cl:ensure-generic-function 'msg-val :lambda-list '(m))
 (cl:defmethod msg-val ((m <DownloadFile-response>))
@@ -124,12 +124,12 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
     )
-  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'data))))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'link))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'data))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'link))
   (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'msg))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
@@ -150,9 +150,9 @@
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'data) (cl:make-string __ros_str_len))
+      (cl:setf (cl:slot-value msg 'link) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
-        (cl:setf (cl:char (cl:slot-value msg 'data) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+        (cl:setf (cl:char (cl:slot-value msg 'link) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
     (cl:let ((__ros_str_len 0))
       (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
@@ -171,27 +171,27 @@
   "api_msgs/DownloadFileResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DownloadFile-response>)))
   "Returns md5sum for a message object of type '<DownloadFile-response>"
-  "b6f4d556a4d514eccc6afa6e8d44d8f9")
+  "a93515b901dc74b0c77f07911f2857ac")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DownloadFile-response)))
   "Returns md5sum for a message object of type 'DownloadFile-response"
-  "b6f4d556a4d514eccc6afa6e8d44d8f9")
+  "a93515b901dc74b0c77f07911f2857ac")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DownloadFile-response>)))
   "Returns full string definition for message of type '<DownloadFile-response>"
-  (cl:format cl:nil "int32 size~%string data~%string msg~%~%~%~%"))
+  (cl:format cl:nil "int32 size~%string link~%string msg~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DownloadFile-response)))
   "Returns full string definition for message of type 'DownloadFile-response"
-  (cl:format cl:nil "int32 size~%string data~%string msg~%~%~%~%"))
+  (cl:format cl:nil "int32 size~%string link~%string msg~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DownloadFile-response>))
   (cl:+ 0
      4
-     4 (cl:length (cl:slot-value msg 'data))
+     4 (cl:length (cl:slot-value msg 'link))
      4 (cl:length (cl:slot-value msg 'msg))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <DownloadFile-response>))
   "Converts a ROS message object to a list"
   (cl:list 'DownloadFile-response
     (cl:cons ':size (size msg))
-    (cl:cons ':data (data msg))
+    (cl:cons ':link (link msg))
     (cl:cons ':msg (msg msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'DownloadFile)))
